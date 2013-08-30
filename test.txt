@@ -1,0 +1,39 @@
+BaseViewController
+
+
+// 标准控件
+
+UIActionSheet
+
+UIAlertView
+
+MBProgressHUD
+
+
+
+
+
+// 布局模版，都基于 BaseVC ，都是 NavgationVC
+
+
+// app 整体布局 
+1. UITabBarController  、 ViewDeck 、
+
+
+// 单个 视图控制器布局
+1. 只含UITableView
+
+2. subview 布局，UIView、UIImageView。UIButton
+
+
+
+
+
+
+
+
+// 问题 ， 图片数组
+
+settings 界面， uiswitch 
+
+不同行的不同 action 
