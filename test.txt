@@ -37,3 +37,6 @@ MBProgressHUD
 settings 界面， uiswitch 
 
 不同行的不同 action 
+
+
+http://www.devdiv.com/forum.php?mod=viewthread&tid=197506
