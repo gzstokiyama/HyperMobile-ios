@@ -1,4 +1,83 @@
 {
-    "layout": "template-nav", 
-    "rootViewController": "json/tabBarController/HomeViewController.json"
+    "title":"homeVC",
+
+    "bg_color":{
+        "type":"UIColor",
+        "UIColor":[
+            255,
+            255,
+            255
+        ]
+    },
+
+    "navBar_tintColor":[
+        52,
+        112,
+        162
+    ],
+
+    "nav_btn":[
+
+        {
+            "position":0,
+            "tintColor":[
+                62,
+                132,
+                182
+            ],
+            "title":"leftBtn",
+            "action":{
+                "action":"push",
+                "file":"json/leftBtnViewController.json"
+            }
+        },
+
+        {
+            "position":1,
+            "tintColor":[
+                62,
+                132,
+                182
+            ],
+            "title":"rightBtn",
+            "action":{
+                "action":"present",
+                "file":"json/rightBtnViewController.json"
+            }
+        }
+
+    ],
+
+    "subview":[
+
+        {
+            "class_name":"UIButton",
+            "frame":"(0,84,200,60)",
+            "bg_color":{
+                "type":"UIImage",
+                "UIImage":"json/somePackage/btn.png"
+            },
+            "title":"btnStr",
+            "action":{
+                "action":"push",
+                "json":"json/somePackage/cellDetail.json"
+            }
+        },
+
+        {
+            "class_name":"UILabel",
+            "frame":"(0,124,300,100)",
+            "bg_color":{
+                "type":"UIColor",
+                "UIColor":[
+                    255,
+                    255,
+                    255
+                ]
+            },
+            "title":"labelStr"
+        }
+
+    ]
+    
 }
