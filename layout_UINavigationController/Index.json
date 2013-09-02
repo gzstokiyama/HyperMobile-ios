@@ -50,22 +50,10 @@
 
     "subview":[
 
-        {
-            "class_name":"UIButton",
-            "frame":"(0,84,200,60)",
-            "bg_color":{
-                "type":"UIImage",
-                "UIImage":"json/somePackage/btn.png"
-            },
-            "title":"btnStr",
-            "action":{
-                "action":"push",
-                "json":"json/somePackage/cellDetail.json"
-            }
-        },
 
         {
             "class_name":"UILabel",
+            "var_name":"testLabel",
             "frame":"(0,124,300,100)",
             "bg_color":{
                 "type":"UIColor",
@@ -76,6 +64,21 @@
                 ]
             },
             "title":"labelStr"
+        },
+
+        {
+            "class_name":"UIButton",
+            "var_name":"testButton",
+            "frame":"(0,84,200,60)",
+            "bg_color":{
+                "type":"UIImage",
+                "UIImage":"json/somePackage/btn.png"
+            },
+            "title":"btnStr",
+            "action":{
+                "action":"push",
+                "json":"json/somePackage/cellDetail.json"
+            }
         }
 
     ]

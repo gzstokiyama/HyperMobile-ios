@@ -1,4 +1,6 @@
 {
-    "layout": "template-nav", 
-    "rootViewController": "json/tabBarController/Index.json"
+    "template": {
+    	"type": "UINavigationController", 
+    	"rootViewController": "json/Index.json"
+    }
 }
