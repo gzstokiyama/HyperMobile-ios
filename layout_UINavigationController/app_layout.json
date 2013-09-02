@@ -1,4 +1,4 @@
 {
     "layout": "template-nav", 
-    "rootViewController": "json/tabBarController/HomeViewController.json"
+    "rootViewController": "json/tabBarController/Index.json"
 }

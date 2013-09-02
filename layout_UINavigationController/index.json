@@ -28,7 +28,7 @@
             "title":"leftBtn",
             "action":{
                 "action":"push",
-                "file":"json/leftBtnViewController.json"
+                "file":"json/LeftBtnViewController.json"
             }
         },
 
@@ -42,7 +42,7 @@
             "title":"rightBtn",
             "action":{
                 "action":"present",
-                "file":"json/rightBtnViewController.json"
+                "file":"json/RightBtnViewController.json"
             }
         }
 
