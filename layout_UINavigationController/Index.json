@@ -1,5 +1,5 @@
 {
-    "title":"homeVC",
+    "title":"RootVC",
 
     "bg_color":{
         "type":"UIColor",
