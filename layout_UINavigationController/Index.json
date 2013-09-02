@@ -63,7 +63,20 @@
                     255
                 ]
             },
-            "title":"labelStr"
+
+            "title":{
+                "str":"label",
+                "font":{
+                    "bold":"NO",
+                    "size":18,
+                    "color":[
+                        255,
+                        255,
+                        255
+                    ]
+                }
+            }
+
         },
 
         {
@@ -74,9 +87,22 @@
                 "type":"UIImage",
                 "UIImage":"json/somePackage/btn.png"
             },
-            "title":"btnStr",
+
+            "title":{
+                "str":"button",
+                "font":{
+                    "bold":"NO",
+                    "size":18,
+                    "color":[
+                        255,
+                        255,
+                        255
+                    ]
+                }
+            },
+
             "action":{
-                "action":"push",
+                "type":"push",
                 "json":"json/somePackage/cellDetail.json"
             }
         }
