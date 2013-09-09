@@ -20,29 +20,32 @@
 
         {
             "position":0,
-            "tintColor":[
+            "barButtonItem_tintColor":[
                 62,
                 132,
                 182
             ],
             "title":"leftBtn",
+
             "action":{
-                "action":"push",
-                "file":"json/LeftBtnViewController.json"
+                "event":"modal",
+                "transitionStyle":"UIModalTransitionStyleCoverVertical",
+                "json":"json/LeftBarBtn.json"
             }
+
         },
 
         {
             "position":1,
-            "tintColor":[
+            "barButtonItem_tintColor":[
                 62,
                 132,
                 182
             ],
             "title":"rightBtn",
             "action":{
-                "action":"present",
-                "file":"json/RightBtnViewController.json"
+                "event":"push",
+                "file":"json/RightBtn.json"
             }
         }
 

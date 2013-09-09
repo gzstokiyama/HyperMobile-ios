@@ -1,0 +1,135 @@
+{
+    "title":"LBBPresentVC",
+
+    "bg_color":{
+        "type":"UIColor",
+        "UIColor":[
+            255,
+            255,
+            255
+        ]
+    },
+
+    "navBar_tintColor":[
+        52,
+        112,
+        162
+    ],
+
+    "nav_btn":[
+
+        {
+            "position":0,
+            "barButtonItem_tintColor":[
+                62,
+                132,
+                182
+            ],
+            "title":"返回",
+
+            "action":{
+                "event":"dismiss",
+            }
+
+        },
+
+        {
+            "position": 1,
+            "barButtonItem_tintColor": [
+                62,
+                132,
+                182
+            ],
+            "title": "发送",
+            "action": {
+                "event": "request",
+                "param": ""
+            }
+        }
+
+    ],
+
+    "subview":[
+
+        {
+            "class_name":"UIImageView",
+
+            "var_name":"imageView",
+
+            "frame": [
+                100,
+                100,
+                150,
+                150
+            ],
+
+            "image": "img/default_image.png",
+
+            "action":{
+                "event": "UIActionSheet",
+                "items": [
+
+                    {
+                        "type": "otherButtonItems", 
+                        "label": "拍照",
+
+                        "action":{
+                            "event": "UIImagePickerControllerSourceTypeCamera", 
+
+                            "PickingImageSuccess": {
+
+                                "image_data": "choosedImage",
+
+                                "action":{
+                                    "event": "code", 
+                                    "code": "imageView.image=choosedImage"
+                                }
+                                
+                            }
+                        }
+                    },
+
+                    {
+                        "type": "otherButtonItems", 
+                        "label": "相册",
+
+                        "action":{
+                            "event": "UIImagePickerControllerSourceTypePhotoLibrary", 
+                            
+                            "PickingImageSuccess": {
+                                
+                                "image_data": "choosedImage",
+
+                                "action":{
+                                    "event": "code", 
+                                    "code": "imageView.image=choosedImage"
+                                }
+                                
+                            }
+                        }
+                    }, 
+
+                    {
+                        "type": "destructiveButtonItem", 
+                        "label": "删除",
+
+                        "action":{
+                            "event": "code", 
+                            "code": "choosedImage = nil , self.imageView.image = PNGIMAGE(@"default_image");"
+                        }
+
+                    }, 
+
+                    {
+                        "type": "cancelButtonItem", 
+                        "label": "取消",
+                        "event": "log('cancel')"
+                    }
+
+                ]
+            }
+        }
+
+    ]
+    
+}

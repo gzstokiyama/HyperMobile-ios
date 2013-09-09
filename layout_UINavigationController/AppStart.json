@@ -1,6 +1,33 @@
 {
     "template": {
-    	"type": "UINavigationController", 
-    	"rootViewController": "json/Index.json"
+
+        "type": "UINavigationController", 
+
+        "default_color":{
+            
+            "navBar_tintColor":[
+                52,
+                122,
+                162
+            ],
+
+            "barButtonItem_tintColor":[
+                68,
+                156,
+                182
+            ],
+
+            "bg_color":{
+                "type":"UIColor",
+                "UIColor":[
+                    232,
+                    242,
+                    250
+                ]
+            },
+
+        }
+
+        "rootViewController": "json/Index.json"
     }
 }
