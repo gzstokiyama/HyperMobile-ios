@@ -3,6 +3,8 @@
 
         "type": "UINavigationController", 
 
+        "rootViewController": "json/Index.json",
+
         "default_color":{
             
             "navBar_tintColor":[
@@ -28,6 +30,6 @@
 
         }
 
-        "rootViewController": "json/Index.json"
+        
     }
 }

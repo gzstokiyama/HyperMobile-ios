@@ -1,12 +1,12 @@
 {
-    "title":"RootVC",
+    "title":"Index",
 
     "bg_color":{
         "type":"UIColor",
         "UIColor":[
-            255,
-            255,
-            255
+            232,
+            242,
+            250
         ]
     },
 
@@ -25,7 +25,7 @@
                 132,
                 182
             ],
-            "title":"leftBtn",
+            "title":"left",
 
             "action":{
                 "event":"modal",
@@ -42,10 +42,10 @@
                 132,
                 182
             ],
-            "title":"rightBtn",
+            "title":"right",
             "action":{
                 "event":"push",
-                "file":"json/RightBtn.json"
+                "file":"json/RightBarBtn.json"
             }
         }
 
@@ -55,9 +55,9 @@
 
 
         {
-            "class_name":"UILabel",
-            "var_name":"testLabel",
-            "frame":"(0,124,300,100)",
+            "class_name":"UIPlaceHolderTextField",
+            "var_name":"testTextField",
+            "frame":"(10,10,300,40)",
             "bg_color":{
                 "type":"UIColor",
                 "UIColor":[
@@ -67,46 +67,119 @@
                 ]
             },
 
-            "title":{
-                "str":"label",
-                "font":{
-                    "bold":"NO",
+            "font":{
+                "bold":"NO",
+                "size":16,
+                "color":[
+                    255,
+                    255,
+                    255
+                ]
+            },
+
+            "placeholder": "请输入标题..."
+        },
+
+        {
+            "class_name":"UIPlaceHolderTextView",
+            "var_name":"testTextView",
+            "frame":"(10,60,300,150)",
+            "bg_color":{
+                "type":"UIColor",
+                "UIColor":[
+                    255,
+                    255,
+                    255
+                ]
+            },
+
+            "font":{
+                "bold":"NO",
+                "size":16,
+                "color":[
+                    255,
+                    255,
+                    255
+                ]
+            },
+
+            "placeholder": "请输入内容..."
+        },
+
+
+        {
+            "class_name":"UILabel",
+            "var_name":"testLabel",
+            "frame":"(10,220,160,50)",
+            "bg_color":{
+                "type":"UIColor",
+                "UIColor":[
+                    249,
+                    255,
+                    0
+                ]
+            },
+
+            "title":"label",
+                
+            "font":{
+                    "bold":"YES",
                     "size":18,
                     "color":[
-                        255,
-                        255,
-                        255
+                        0,
+                        0,
+                        0
                     ]
-                }
-            }
+            },
+
+            "textAlignment": "TextAlignmentCenter"
 
         },
+
 
         {
             "class_name":"UIButton",
             "var_name":"testButton",
-            "frame":"(0,84,200,60)",
+            "frame":"(200,220,100,40)",
+
             "bg_color":{
                 "type":"UIImage",
-                "UIImage":"json/somePackage/btn.png"
+                "file_name":"btn"
             },
 
-            "title":{
-                "str":"button",
-                "font":{
-                    "bold":"NO",
-                    "size":18,
-                    "color":[
-                        255,
-                        255,
-                        255
-                    ]
-                }
+            "title":"button",
+                
+            "font":{
+                "bold":"NO",
+                "size":22,
+                "color":[
+                    255,
+                    255,
+                    255
+                ]
             },
 
             "action":{
-                "type":"push",
-                "json":"json/somePackage/cellDetail.json"
+                "type":"log",
+                "str":"button pressed"
+            }
+        }, 
+
+
+        {
+            "class_name":"UIImageView",
+            "var_name":"testImageView",
+            "frame":"(200,280,90,90)",
+
+            "img":"default_image",
+
+            "contentMode":"UIViewContentModeScaleAspectFill",
+
+            "radius":"5",
+
+            "action":{
+                "type":"log",
+                "str":"button pressed"
             }
         }
 
