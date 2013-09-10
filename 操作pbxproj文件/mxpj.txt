@@ -1,0 +1,125 @@
+
+/*------------------------  1. 添加 group ------------------------ */
+
+/* Begin PBXGroup section */    /* 在此 section 块 添加 如 testGroup 组， */
+
+		/* 添加的 testGroup 组自身 */
+		70CF035D17DEF505006C80BC /* testGroup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = testGroup;
+			sourceTree = "<group>";
+		};
+
+		/* 添加的 testGroup 组属于哪个父组的子节点 */
+		50CF035D17DEF505006C80BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				70CF035D17DEF505006C80BC /* testGroup */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+
+
+/*------------------------ 2. 添加 .h 文件 ------------------------*/
+
+/* Begin PBXFileReference section */   /* 在此 section 块中 生成代表 .h 文件的随机数 为 key 添加如下行 ，将值中 path 的 值 改为 .h 文件的文件名 */
+
+70D404AA17DDD23E004B0398 /* ACMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACMacros.h; sourceTree = "<group>"; };
+
+
+/* Begin PBXGroup section */    /* 在此 section 块中要将 .h 文件放入的 group 的 children 值中添加上一步生成的 代表 .h 文件的随机数， */
+
+		50CF036017DEF505006C80BC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				70D404AA17DDD23E004B0398 /* ACMacros.h */
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+
+
+
+
+
+/*------------------------ 3. 添加 一个类 （ .h 和 .m 文件 ） ------------------------*/
+
+/* Begin PBXFileReference section */   /* 在引用块中生成 代表 .h .m 文件的随机数 添加相应内容 path 的值 都改为 文件名*/
+
+80D404AA17DDD23E004B0398 /* IndexJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexJViewController.h; sourceTree = "<group>"; };
+80D404AB17DDD23E004B0398 /* IndexJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexJViewController.m; sourceTree = "<group>"; };
+
+
+/* Begin PBXGroup section */    /* 在此 section 块中要将 .h .m 文件放入的 group 的 children 值中添加 上一步生成的 代表 .h .m 文件的随机数， */
+
+		70CF035D17DEF505006C80BC /* testGroup */ = {
+			isa = PBXGroup;
+			children = (
+				80D404AA17DDD23E004B0398 /* IndexJViewController.h */ 
+				80D404AB17DDD23E004B0398 /* IndexJViewController.m */
+			);
+			path = testGroup;
+			sourceTree = "<group>";
+		};
+
+
+/* Begin PBXSourcesBuildPhase section */  /* 再在 BuildPhase 块中 生成代表 .m 文件的 buildPhase 随机数  */
+
+		50D4048B17DDD23E004B0398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				
+				/* 此处省略 ... */
+
+
+				80D404AC17DDD23E004B0398 /* IndexJViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+
+/* Begin PBXBuildFile section */  /* 再在 BuildFile 块中 以 .m 文件的 buildPhase 随机数为 key， 关联 代表 .m 文件的 随机数  80D404AB17DDD23E004B0398*/
+
+80D404AC17DDD23E004B0398 /* IndexJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D404AB17DDD23E004B0398 /* IndexJViewController.m */; };
+
+
+
+/*------------------------ 4. 添加 图片 ------------------------*/
+
+/* Begin PBXFileReference section */   /* 在文件引用块中生成 代表 .png 文件的随机数 添加相应内容 path 的值 都改为 文件名*/
+
+80D404A417DDD23E004B0398 /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn.png; sourceTree = "<group>"; };
+
+
+/* Begin PBXGroup section */    /* 在 group 块中的 要将 .png 文件放入的 group 的 children 值中添加 上一步生成的 代表 .png 文件的随机数， */
+		50CF036117DEF505006C80BC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				80D404A417DDD23E004B0398 /* btn.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+
+
+/* Begin PBXResourcesBuildPhase section */  /* 再在 BuildPhase 块中 生成代表 .png 文件的 buildPhase 随机数  */
+		50D4048D17DDD23E004B0398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+
+				/* 此处省略 ... */
+
+				80D404A517DDD23E004B0398 /* btn.png  in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+
+/* Begin PBXBuildFile section */  /* 再在 BuildFile 块中 以 .png 文件的 buildPhase 随机数为 key， 关联 代表 .png 文件的 随机数  80D404A417DDD23E004B0398*/
+
+80D404A517DDD23E004B0398 /* btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D404A417DDD23E004B0398 /* btn.png */; };
