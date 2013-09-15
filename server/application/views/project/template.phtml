@@ -1,0 +1,101 @@
+<?php 
+require_once(PUB_TPL."/public/header.phtml");
+require_once(PUB_TPL."/public/topmenu.phtml");
+?>
+<script type="text/javascript" src="/assets/scripts/shCore.js"></script>
+<script type="text/javascript" src="/assets/scripts/shBrushObjC.js"></script>
+<link href="/assets/sh/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="/assets/sh/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<div class="container">
+	<div class="row">
+		<div class="span10 offset1">
+			<p class="lead">文件浏览器</p>
+
+		</div>
+	</div>
+</div>
+<div class="container">
+<div class="row">
+<ul class="breadcrumb">
+	<li><a href="/project/template?path=">/</a></li>
+	<?php
+		$total=count($path_array);
+		$current_path_base='';
+		for ($i=0; $i <$total ; $i++) { 
+			if ($i==$total-1) {
+				echo '<li class="active">'.$path_array[$i].'</li>';
+			}else {
+				$current_path_base=$current_path_base."/".$path_array[$i];
+				echo '<li><a href="/project/template?path=';
+				echo $current_path_base;
+				echo '">'.$path_array[$i].'</a> <span class="divider">/</span></li>';
+			}
+		}
+	?>
+</ul>
+<div class="span12"  style="margin-bottom:200px">
+<?php
+if ($render=="folder") {
+?>	
+<table class="table table-striped table-bordered table-hover">
+	<tr><th>#</th><th> 文件</th></tr>
+	<?php 
+	foreach ($dir as $key => $value) {
+		if (is_file($fullpath."/".$value)) {
+			$is_file=1;$is_dir=0;
+		}else{
+			$is_dir=1;$is_file=0;
+		}
+		echo "<tr class='";
+		if ($is_file==1) {
+			echo '';
+		}else{
+			echo 'info';
+		}
+		echo "''><td>";
+		if ($is_file==1) {
+			echo '<i class="icon-file"></i>';
+		}else{
+			echo '<i class="icon-folder-open"></i>';
+		}
+		echo "</td><td><a href='/project/template?path=".$path."/".$value."'>".$value."</a></td></tr>";
+	}
+
+	?>
+</table>
+
+
+
+<?php
+}else{
+	$file_type=strtolower(end(explode('.', $path)));
+	if (in_array($file_type,array("jpg","jpeg","png","gif"))) {
+		// echo "<pre>图片不能直接显示</pre>";
+		echo "<img src='data:image/".$file_type.";base64,".base64_encode(file_get_contents($fullpath))."'/>";
+	}else{
+?>
+<pre class="brush:objc"><?php 
+echo htmlspecialchars((file_get_contents($fullpath)));
+
+}
+?></pre>
+
+
+<?php
+}
+?>
+
+
+
+
+</div>
+</div>
+</div>
+ 
+<script type="text/javascript">
+     SyntaxHighlighter.all();
+</script>
+
+<?php
+require_once(PUB_TPL."/public/footer.phtml");
+?>

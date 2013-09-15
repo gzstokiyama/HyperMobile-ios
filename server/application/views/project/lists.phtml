@@ -1,0 +1,142 @@
+<?php 
+require_once(PUB_TPL."/public/header.phtml");
+require_once(PUB_TPL."/public/topmenu.phtml");
+?>
+<script type="text/javascript" src="/assets/scripts/shCore.js"></script>
+<script type="text/javascript" src="/assets/scripts/shBrushObjC.js"></script>
+<link href="/assets/sh/shCoreEclipse.css" rel="stylesheet" type="text/css" />
+<link href="/assets/sh/shThemeEclipse.css" rel="stylesheet" type="text/css" />
+<div class="container">
+	<div class="row">
+		<div class="span10 offset1">
+			<p class="lead">项目文件浏览器</p>
+
+		</div>
+	</div>
+</div>
+<div class="container">
+<div class="row">
+<ul class="breadcrumb">
+	<li><a href="/project/lists?path=">/</a></li>
+	<?php
+		$total=count($path_array);
+		$current_path_base='';
+		for ($i=0; $i <$total ; $i++) { 
+			if ($i==$total-1) {
+				echo '<li class="active">'.$path_array[$i].'</li>';
+			}else {
+				$current_path_base=$current_path_base."/".$path_array[$i];
+				echo '<li><a href="/project/lists?path=';
+				echo $current_path_base;
+				echo '">'.$path_array[$i].'</a> <span class="divider">/</span></li>';
+			}
+		}
+	?>
+</ul>
+<div class="span12"  style="margin-bottom:200px">
+<?php
+if ($render=="folder") {
+?>	
+<table class="table table-striped table-bordered table-hover">
+	<tr><th>#</th><th> 文件</th><th>操作</th></tr>
+	<?php 
+	foreach ($dir as $key => $value) {
+		if (is_file($fullpath."/".$value)) {
+			$is_file=1;$is_dir=0;
+		}else{
+			$is_dir=1;$is_file=0;
+		}
+		echo "<tr id='";
+		echo "id".$is_file.$key;
+		echo "' class='";
+		if ($is_file==1) {
+			echo '';
+		}else{
+			echo 'info';
+		}
+		echo "''><td>";
+		if ($is_file==1) {
+			echo '<i class="icon-file"></i>';
+		}else{
+			echo '<i class="icon-folder-open"></i>';
+		}
+		echo "</td><td><a href='/project/lists?path=".$path."/".$value."'>".$value."</a></td>";
+		echo "<td>";
+		// echo "btn";
+		//删除按钮
+		if ($is_file) {
+			echo "<a href='javascript:void(0);' data-file='".$path."/".$value."' data-id='id".$is_file.$key."' class='btn btn-warning'>删除</a>";
+		}else{
+			echo "<a href='javascript:void(0);' data-folder='".$path."/".$value."' data-id='id".$is_file.$key."' class='btn btn-danger'>删除</a>";
+		}
+		echo "</td>";
+		echo "</tr>";
+	}
+
+	?>
+</table>
+
+
+
+<?php
+}else{
+	$file_type=strtolower(end(explode('.', $path)));
+	if (in_array($file_type,array("jpg","jpeg","png","gif"))) {
+		// echo "<pre>图片不能直接显示</pre>";
+		echo "<img src='data:image/".$file_type.";base64,".base64_encode(file_get_contents($fullpath))."'/>";
+	}else{
+?>
+<pre class="brush:objc"><?php 
+echo htmlspecialchars((file_get_contents($fullpath)));
+
+}
+?></pre>
+<script type="text/javascript">
+     SyntaxHighlighter.all();
+</script>
+
+<?php
+}
+?>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("[data-folder]").click(function(){
+		var trid=$(this).attr("data-id");
+		var delpath=$(this).attr("data-folder");
+		if (window.confirm("确定要删除这个文件夹吗？")) {
+			$.post("/project/delete?type=folder",{"path":delpath},function(d){
+				if (d.status==1) {
+					$("#"+trid).fadeOut(1300);
+				}else{
+					alert("删除失败");
+				}
+			},"json");
+		}
+	});
+	$("[data-file]").click(function(){
+		var trid=$(this).attr("data-id");
+		var delpath=$(this).attr("data-file");
+		if (window.confirm("确定要删除这个文件吗？")) {
+			$.post("/project/delete?type=file",{"path":delpath},function(d){
+				if (d.status==1) {
+					$("#"+trid).fadeOut(1300);
+				}else{
+					alert("删除失败");
+				}
+			},"json");
+		}
+	});
+});
+</script>
+
+
+</div>
+</div>
+</div>
+ 
+
+
+<?php
+require_once(PUB_TPL."/public/footer.phtml");
+?>

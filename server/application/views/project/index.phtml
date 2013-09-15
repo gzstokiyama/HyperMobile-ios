@@ -1,0 +1,126 @@
+<?php 
+require_once(PUB_TPL."/public/header.phtml");
+require_once(PUB_TPL."/public/topmenu.phtml");
+?>
+
+ 
+<div class="container">
+	<div class="row">
+		<div class="span6 offset3">
+
+
+			<form class="form-horizontal">
+			  <div class="control-group">
+			    <label class="control-label" for="bundleid">bundle id:</label>
+			    <div class="controls">
+			      <div class="input-prepend">
+  			  		<span class="add-on">com.imshenqi.</span>
+			  		<input class="span2" id="idstring" type="text" placeholder="identifier string">
+				  </div>
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <label class="control-label" for="displayname">名称:</label>
+			    <div class="controls">
+			      <input type="text" id="displayname" placeholder="显示名称">
+			    </div>
+			  </div>
+			  <div class="control-group">
+			    <div class="controls">
+			      <button type="button" id="generatebtn" class="btn btn-primary">生成</button>
+			    </div>
+			  </div>
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+function alert2(contents){
+	$("#alertmodalcontent").html(contents);
+	$('#alertModal').modal('toggle');
+}
+$(document).ready(function(){
+	$("#generatebtn").click(function(){
+		var bundleid=$("#idstring").val();
+		var displayname=$("#displayname").val();
+		if (bundleid==''||bundleid==null) {
+			alert2('bundleid不能为空');
+		}else if(displayname==''||displayname==null){
+			alert2("显示名称不能为空");
+		}else{
+			var folder='<?php  echo  date("YmdGis");  ?>';
+			//
+			var _generateFun=[
+			function(){//拷贝文件夹
+				//
+				$.post("/project/mkdir",{"submit":1,"folder":folder},function(d){
+					if (d.status==1) {
+						_nextStep();
+					}else{
+						alert2("生成失败，错误信息："+d.info);
+					}
+
+				},"json");
+			},
+			function(){//重命名文件夹 和 文件
+				//
+				$.post("/project/rename",{"submit":1,"folder":folder,"bundleid":bundleid},function(d){
+					if (d.status==1) {
+						_nextStep();
+					}else{
+						alert2("生成失败，错误信息："+d.info);
+					}
+
+				},"json");
+			},
+			function(){//替换文件夹中的关键词
+				//
+				$.post("/project/replace",{"submit":1,"folder":folder,"bundleid":bundleid,"displayname":displayname},function(d){
+					if (d.status==1) {
+						_nextStep();
+					}else{
+						alert2("生成失败，错误信息："+d.info);
+					}
+
+				},"json");
+			},
+			function(){alert2("项目生成完成");}
+			];
+			$('body').queue('generateProcess',_generateFun); 
+			var _nextStep=function(){ 
+				$('body').dequeue('generateProcess'); 
+			}; 
+			_nextStep();
+
+
+
+			//
+		}
+	});
+});
+</script>
+
+<div id="alertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">提示</h3>
+  </div>
+  <div class="modal-body">
+    <p id="alertmodalcontent"></p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">好</button>
+    
+  </div>
+</div>
+
+
+
+
+
+ 
+<?php
+require_once(PUB_TPL."/public/footer.phtml");
+?>
