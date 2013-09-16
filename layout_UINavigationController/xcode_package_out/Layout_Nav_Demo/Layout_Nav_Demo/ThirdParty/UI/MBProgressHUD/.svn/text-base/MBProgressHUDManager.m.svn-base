@@ -1,0 +1,244 @@
+//
+//  MBProgressHUDManager.m
+//  MBProgressHUDManager
+//
+//  Created by Albert Chu on 13-6-16.
+//  Copyright (c) 2013年 Albert Chu. All rights reserved.
+//
+
+#import "MBProgressHUDManager.h"
+
+#import "MBProgressHUD.h"
+
+enum EM_MBP_VIEW_TAG
+{
+    MBP_LOADING_HUD         = 777998122,
+    MBP_PROMPT_HUD          = 777998123,
+    MBP_IMAGE_HUD           = 777998124
+};
+
+@interface MBProgressHUDManager () <MBProgressHUDDelegate>
+{
+    MBProgressHUD *_loadingHud;     /** 加载动画视图 */
+    MBProgressHUD *_promptHud;      /** 纯文字提示 */
+    MBProgressHUD *_imageHud;       /** 图片符号视图 */
+}
+
+@end
+
+
+@implementation MBProgressHUDManager
+
+#pragma mark - Singleton
+
++ (MBProgressHUDManager *)sharedInstance
+{
+    static MBProgressHUDManager *sharedobject;
+    @synchronized(self)
+    {
+        if ( !sharedobject )
+        {
+            sharedobject = [[MBProgressHUDManager alloc] init];
+        }
+    }
+    return sharedobject;
+}
+
+
+#pragma mark - init 
+
+- (id)init
+{
+    if ( self = [super init] )
+    {
+        
+    }
+    return self;
+}
+
+
+#pragma mark - dealloc
+
+- (void)dealloc
+{
+    if ( nil != _loadingHud )
+    {
+        [_loadingHud release], _loadingHud = nil;
+    }
+    
+    if ( nil != _promptHud )
+    {
+        [_promptHud release], _promptHud = nil;
+    }
+    
+    if ( nil != _imageHud )
+    {
+        [_imageHud release], _imageHud = nil;
+    }
+    [super dealloc];
+}
+
+
+#pragma mark - public method
+
+/**
+ * 在某UIView上显示文字及转圈的加载提示
+ * @param aView 显示在哪个UIView上
+ * @param aText 提示文字
+ */
+- (void)showLoadingHUDViewOnView:(UIView *)theView withText:(NSString *)theText
+{
+    if ( nil != _loadingHud )
+    {
+        [_loadingHud release], _loadingHud = nil;
+        //[_loadingHud hide:YES];
+    }
+    
+    _loadingHud = [[MBProgressHUD alloc] initWithView:theView];
+    _loadingHud.tag = MBP_LOADING_HUD;
+    [theView addSubview:_loadingHud];
+    
+    _loadingHud.mode = MBProgressHUDModeIndeterminate;
+    
+    _loadingHud.delegate = self;
+	_loadingHud.labelText = theText;
+	
+	[_loadingHud show:YES];
+}
+
+/**
+ * 隐藏Loading动画
+ */
+- (void)hideLoadingView
+{
+    if ( nil != _loadingHud )
+    {
+        [_loadingHud removeFromSuperview];
+		[_loadingHud release];
+        _loadingHud = nil;
+    }
+}
+
+/**
+ * 在某UIView上显示纯文字提示
+ * @param aView 显示在哪个UIView上
+ * @param aText 提示文字
+ * @param delayTime 显示多久后隐藏
+ */
+- (void)showHUDViewOnView:(UIView *)theView
+             withOnlyText:(NSString *)theText
+                hideAfter:(NSTimeInterval)theDelayTime
+{
+    if ( nil != _promptHud )
+    {
+        [_promptHud release], _promptHud = nil;
+    }
+    
+    _promptHud = [[MBProgressHUD alloc] initWithView:theView];
+    _promptHud.tag = MBP_PROMPT_HUD;
+	[theView addSubview:_promptHud];
+	
+        
+    // Configure for text only and offset down
+    _promptHud.mode = MBProgressHUDModeText;
+    _promptHud.labelText = theText;
+    _promptHud.margin = 20.f;
+    //_promptHud.yOffset = 10.f;
+    
+    // 设置视图中心
+//    [_promptHud setCenter:CGPointMake(
+//                                      CGRectGetMidX(theView.frame),
+//                                      CGRectGetMidY(theView.frame)
+//                                      )];    
+    
+    _promptHud.removeFromSuperViewOnHide = YES;
+	
+    [_promptHud show:YES];
+	[_promptHud hide:YES afterDelay:theDelayTime];
+    
+}
+
+/**
+ * 在某UIView上显示图片及文字提示
+ * @param theView 显示在哪个UIView上
+ * @param theText 提示文字
+ * @param theImage 图片
+ * @param theDelayTime 显示多久后隐藏
+ */
+- (void)showHUDViewOnView:(UIView *)theView
+                 withText:(NSString *)theText
+                 andImage:(UIImage *)theImage
+                hideAfter:(NSTimeInterval)theDelayTime
+{
+    if ( nil != _imageHud )
+    {
+        [_imageHud release], _imageHud = nil;
+    }
+    
+    _imageHud = [[MBProgressHUD alloc] initWithView:theView];
+    _imageHud.tag = MBP_IMAGE_HUD;
+	[theView addSubview:_imageHud];
+
+	
+	// The sample image is based on the work by ht tp://www.pixelpressicons.com, ht tp://creativecommons.org/licenses/by/2.5/ca/
+	// Make the customViews 37 by 37 pixels for best results (those are the bounds of the build-in progress indicators)
+	_imageHud.customView = [[[UIImageView alloc] initWithImage:theImage] autorelease];
+	
+	// Set custom view mode
+	_imageHud.mode = MBProgressHUDModeCustomView;
+	
+	_imageHud.delegate = self;
+	_imageHud.labelText = theText;
+	    
+	[_imageHud show:YES];
+	[_imageHud hide:YES afterDelay:theDelayTime];
+}
+
+
+#pragma mark MBProgressHUDDelegate methods
+
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
+    //NSLog(@"flag");
+    
+    NSInteger hudTag = hud.tag;
+    
+    switch (hudTag)
+    {
+        case MBP_LOADING_HUD:
+        {
+            [_loadingHud removeFromSuperview];
+            [_loadingHud release];
+            _loadingHud = nil;
+
+        }
+            break;
+            
+        case MBP_PROMPT_HUD:
+        {
+            [_promptHud removeFromSuperview];
+            [_promptHud release];
+            _promptHud = nil;
+        }
+            break;
+            
+        case MBP_IMAGE_HUD:
+        {
+            [_imageHud removeFromSuperview];
+            [_imageHud release];
+            _imageHud = nil;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+	// Remove HUD from screen when the HUD was hidded
+//	[hud removeFromSuperview];
+//	[hud release];
+//	hud = nil;
+}
+
+@end
+
