@@ -1,0 +1,92 @@
+// toDo: 在 Xcode 中 程序配置里的 TARGETS 相关选项的设定，如是否允许旋转屏，系统控件的语言等
+// toDo: App Icons 、 Launch Images ，程序图标和启动图的设定
+// 程序入口描述文件 （ 模版设定、默认着色设定等 ） 
+{
+    // toDo:  type 增加 UIImage 类型的自定义导航栏图片、按钮、视图控制器背景图
+    // k > 默认着色
+    // v > 默认着色详细配置
+    "default_color": {
+            
+            // k > 导航栏的 默认着色
+            // v > 导航栏的 默认着色详细配置
+            "navBar_tintColor": {
+
+                // k > 着色类型
+                // v > RGB 颜色
+                "type": "UIColor",
+
+                // k > RGB 颜色
+                // v > 包含 RGB 数值的数组
+                "UIColor": [
+                    52,
+                    122,
+                    162
+                ]
+
+            }, 
+            
+            // k > 导航栏按钮的 默认着色
+            // v > 导航栏按钮的 默认着色详细配置
+            "barButtonItem_tintColor": {
+
+                // k > 着色类型
+                // v > RGB 颜色
+                "type": "UIColor",
+
+                // k > RGB 颜色
+                // v > 包含 RGB 数值的数组
+                "UIColor": [
+                    68,
+                    156,
+                    182
+                ]
+
+            }, 
+
+            // k > 视图控制器的 默认背景色
+            // v > 导航栏按钮的 默认着色详细配置
+            "bg_color": {
+
+                // k > 背景色类型
+                // v > RGB 颜色
+                "type": "UIColor",
+
+                // k > RGB 颜色
+                // v > 包含 RGB 数值的数组
+                "UIColor": [
+                    232,
+                    242,
+                    250
+                ]
+            } 
+
+    },
+    /**
+     *    设置默认颜色 写入代码的步骤
+     *    1. 在 Constants/AppConstants.h 中 添加3种颜色的 宏 ( 11-18 行 )
+     *    2. 在 Custom/UI/BaseViewController/ACBaseViewCOntroller.m 中 添加3种颜色的相关代码 ( 44,45,51 行 )
+     */
+
+
+    // k > 模版设定
+    // v > 模版详细配置
+    "template": {
+
+        // k > 模版 类型
+        // v > UINavigationController 为主视图的模版
+        "type": "UINavigationController", 
+
+        // k > UINavigationController 的 根视图控制器
+        // v > 根视图控制器的 json 描述文件的 路径。
+        "rootViewController": "json/Index.json"
+        
+    } 
+    /**
+     *    以导航视图为模版 写入代码的步骤
+     *    1. AppDelegate.h 如文件中内容
+     *    2. 在 AppDelegate.m 顶部添加文件导入代码 #import "IndexJViewController.h" (用来引用 导航视图的根视图类)
+     *    3. 在 AppDelegate.m 文件中 didFinishLaunchingWithOptions 回调方法代码块中 添加 22-26 行的代码
+     */
+    
+
+}

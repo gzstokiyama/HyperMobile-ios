@@ -1,0 +1,259 @@
+// 视图控制器 描述文件
+{
+    // k > 视图控制器的 背景色 (会覆盖默认背景色)
+    // v > 背景色详细配置 (具体同 AppConfig 中的说明)
+    "bg_color": {
+        "type": "UIColor",
+        "UIColor": [
+            232,
+            242,
+            250
+        ]
+    },
+    /**
+     *    设置视图控制器背景色 写入代码的步骤
+     *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.view.backgroundColor = RGBCOLOR(232, 242, 250);
+     */
+
+
+    // k > 该视图控制器的导航栏标题
+    // v > 标题字符串
+    "title": "Index",
+    /**
+     *    设置导航栏标题 写入代码的步骤
+     *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.title = @"Index";
+     */
+
+
+    // k > 导航栏的 着色  (会覆盖默认导航栏着色)
+    // v > 着色详细配置 (具体同 AppConfig 中的说明)
+    "navBar_tintColor": {
+        "type": "UIColor",
+        "UIColor": [
+            52,
+            112,
+            162
+        ]
+    }, 
+    /**
+     *    设置导航栏着色 写入代码的步骤
+     *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.navigationController.navigationBar.tintColor = RGBCOLOR(52, 112, 162);
+     */
+
+
+    // k > 导航栏的 左右 按钮
+    // v > 按钮详细配置
+    "nav_btn":[
+        {
+            // k > 标识是左按钮还是右按钮
+            // v > ( 0-左, 1-右 )
+            "position": 0,
+
+            // k > 导航栏按钮的着色 (会覆盖默认导航栏按钮的着色)
+            // v > 着色详细配置 (具体同 AppConfig 中的说明)
+            "barButtonItem_tintColor": {
+                "type": "UIColor",
+                "UIColor": [
+                    62,
+                    132,
+                    182
+                ]
+            }, 
+
+            // k > 按钮文字
+            // v > 文字字符串
+            "title": "left",
+
+            // k > 动作
+            // v > 动作详细配置
+            "action": {
+
+                // k > 事件
+                // v > 事件类型 ( UIAlertView )
+                "event": "UIAlertView", 
+
+                // k > UIAlertView 标题
+                // v > 标题字符串
+                "title": "标题",
+
+                // k > UIAlertView 显示内容
+                // v > 内容字符串
+                "message": "警告的内容",
+                
+                // k > UIAlertView 的按钮
+                // v > 按钮详细配置
+                "items": [
+                    {
+                        // k > UIAlertView 按钮类型
+                        // v > 取消按钮
+                        "type": "cancelButtonItem", 
+
+                        // k > 按钮文字
+                        // v > 文字字符串
+                        "label": "OK"
+                    } 
+                ]
+            }
+
+        },
+        /**
+         *    导航栏左按钮 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  leftItem  注释块中内容
+         *    2. 在 IndexJViewController.m 文件 中添加 - (void)leftBarButtonItemPressed:(UIBarButtonItem *)barButtonItem 方法块
+         *    3. 该方法块中为 UIAlertView 事件，待完成
+         */
+
+
+        {
+            // k > 标识是左按钮还是右按钮
+            // v > ( 0-左, 1-右 )
+            "position": 1,
+
+            // k > 按钮文字
+            // v > 文字字符串
+            "title": "right",
+
+            // k > 动作
+            // v > 动作详细配置
+            "action": null
+        }
+        /**
+         *    导航栏右按钮 写入代码的步骤
+         *    1. 同左按钮相关代码，只是 leftBarButtonItem 全换成 rightBarButtonItem , 暂留空
+         */
+
+    ],
+
+    // k > 视图控制器的 子视图
+    // v > 动作详细配置
+    "subviews": [
+        {
+            // k > 类名
+            // v > UILabel
+            "class_name": "UILabel",
+
+            // k > 变量名
+            // v > testLabel
+            "var_name": "testLabel",
+
+            // k > 坐标
+            // v > x,y,w,h
+            "frame": [
+                10,
+                10,
+                160,
+                40
+            ],
+
+            // k > UILabel 背景色
+            // v > 颜色详细配置
+            "bg_color":{
+
+                // k > 背景色类型
+                // v > 透明色 [UIColor clearColor]
+                "type": "clearColor"
+            },
+
+            // k > 标签文字
+            // v > 文字字符串
+            "title": "测试 UILabel",
+            
+            // k > 标签字体
+            // v > 字体详细配置
+            "font": {
+
+                // k > 是否粗体
+                // v > ( 0-否, 1-是 )
+                "bold": 1,
+
+                // k > 字体大小
+                // v > 大小数值
+                "size": 18,
+
+                // k > 字体颜色
+                // v > 包含 RGB 数值的数组
+                "color":[
+                    0,
+                    0,
+                    0
+                ]
+            },
+
+            // k > 标签文字对齐方式
+            // v > NSTextAlignmentCenter 居中 
+            "textAlignment": "NSTextAlignmentCenter"
+        },
+        /**
+         *    UILabel 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UILabel  注释块中内容
+         */
+
+
+        {
+            "class_name": "UIImageView",
+            "var_name": "testImageView",
+            "frame": [
+                30,
+                70,
+                150,
+                150
+            ],
+
+            // k > 图片文件
+            // v > 图片文件路径
+            "image": "test_image",
+
+            // k > 显示模式
+            // v > 保持比例自适应，有可能裁剪
+            "contentMode": "UIViewContentModeScaleAspectFill",
+
+            // k > 圆角圆度
+            // v > 圆度数字
+            "radius": 5
+            
+        }, 
+        /**
+         *    UIImageView 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UIImageView  注释块中内容
+         */
+
+
+        {
+            "class_name": "UIButton",
+            "var_name": "testButton",
+            "frame": [
+                150,
+                260,
+                100,
+                36
+            ],
+
+            "bg_color": {
+                "type": "UIImage",
+                "file_name": "btn"
+            },
+
+            "title": "按钮",
+                
+            "font": {
+                "bold": 0,
+                "size": 22,
+                "color": [
+                    255,
+                    255,
+                    255
+                ]
+            },
+
+            "action": null
+        }
+        /**
+         *    UIButton 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UIButton  注释块中内容
+         */
+
+        
+
+    ]
+    
+}
