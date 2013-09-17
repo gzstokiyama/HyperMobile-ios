@@ -29,6 +29,7 @@
 		506C7BDE17E6EE24001CA478 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 506C7BD317E6EE24001CA478 /* UIPlaceHolderTextView.m */; };
 		506C7BE217E71739001CA478 /* btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 506C7BE017E71739001CA478 /* btn.png */; };
 		506C7BE317E71739001CA478 /* test_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 506C7BE117E71739001CA478 /* test_image.png */; };
+		50C9EC5417E7F71D00FA73FA /* NewPageJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9EC5317E7F71D00FA73FA /* NewPageJViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,8 @@
 		506C7BD317E6EE24001CA478 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		506C7BE017E71739001CA478 /* btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn.png; sourceTree = "<group>"; };
 		506C7BE117E71739001CA478 /* test_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image.png; sourceTree = "<group>"; };
+		50C9EC5217E7F71D00FA73FA /* NewPageJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPageJViewController.h; sourceTree = "<group>"; };
+		50C9EC5317E7F71D00FA73FA /* NewPageJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPageJViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 			children = (
 				505D5F8017E6DA4000FEA6EA /* IndexJViewController.h */,
 				505D5F8117E6DA4000FEA6EA /* IndexJViewController.m */,
+				50C9EC5117E7F70B00FA73FA /* newPage */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -287,6 +291,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		50C9EC5117E7F70B00FA73FA /* newPage */ = {
+			isa = PBXGroup;
+			children = (
+				50C9EC5217E7F71D00FA73FA /* NewPageJViewController.h */,
+				50C9EC5317E7F71D00FA73FA /* NewPageJViewController.m */,
+			);
+			path = newPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,6 +381,7 @@
 				506C7BDC17E6EE24001CA478 /* MBProgressHUD.m in Sources */,
 				506C7BDD17E6EE24001CA478 /* UIPlaceHolderTextField.m in Sources */,
 				506C7BDE17E6EE24001CA478 /* UIPlaceHolderTextView.m in Sources */,
+				50C9EC5417E7F71D00FA73FA /* NewPageJViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

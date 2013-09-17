@@ -233,7 +233,7 @@
                 "file_name": "btn"
             },
 
-            "title": "按钮",
+            "title": "新页面",
                 
             "font": {
                 "bold": 0,
@@ -245,12 +245,18 @@
                 ]
             },
 
-            "action": null
+            "action": "testPush();"
         }
         /**
          *    UIButton 写入代码的步骤
          *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UIButton  注释块中内容
-         */
+         *    2. 解析用户生成的 Index.js 脚本， 追踪方法名 testPush() 
+         *    3. pushTo(jsonFile) 可作为 功能函数， 对应 objc pushViewController 方法。
+         *    4. newPage/NewPage.json 是新页面的 json 描述文件
+         *    5. 在 IndexJViewController.m 文件 头部导入 该视图控制器类  #import "NewPageJViewController.h" (暂定类名，命名规则为 json 文件 加 JViewController)
+         *    6. 在 IndexJViewController.m 文件 中添加 testButtonPressed 方法块及相关代码，见项目代码中内容
+         *    7. 生成 NewPageJViewController 类 (先生成前面的代码，还是先生成此类，顺序待定)
+         */   
 
         
 

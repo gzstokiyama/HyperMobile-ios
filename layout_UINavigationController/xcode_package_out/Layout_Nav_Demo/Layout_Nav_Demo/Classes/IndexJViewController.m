@@ -8,6 +8,8 @@
 
 #import "IndexJViewController.h"
 
+#import "NewPageJViewController.h"
+
 @interface IndexJViewController ()
 
 @end
@@ -24,7 +26,9 @@
 
 - (void)testButtonPressed:(UIButton *)button
 {
-    DLog(@"test Button Pressed");
+    NewPageJViewController *theNPVC = [[NewPageJViewController alloc] init];
+    
+    [self.navigationController pushViewController:theNPVC animated:YES];
 }
 
 
@@ -103,7 +107,7 @@
                           forState:UIControlStateNormal];
     //[self.testButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     
-    [self.testButton setTitle:@"按钮" forState:UIControlStateNormal];
+    [self.testButton setTitle:@"新页面" forState:UIControlStateNormal];
     
     [self.testButton addTarget:self
                         action:@selector(testButtonPressed:)
