@@ -20,7 +20,15 @@ function testAlert(){
 
 }
 
+var commValue = 
+{ 
+    "someArray": [11,22,33,44,56],
+    "someStr": "传递字符串"
+}
+
+var commObj = commKV("someKey", commValue);
+
 
 function testPush() {
-    pushTo("newPage/NewPage.json");
+    pushTo("newPage/NewPage.json", commObj);
 }

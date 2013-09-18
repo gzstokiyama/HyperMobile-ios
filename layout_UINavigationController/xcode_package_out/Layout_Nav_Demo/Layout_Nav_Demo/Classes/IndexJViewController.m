@@ -113,6 +113,14 @@
                         action:@selector(testButtonPressed:)
               forControlEvents:UIControlEventTouchUpInside];
     
+    if (
+        nil != [self.communicationDictionary objectForKey:@"someKey"]
+        && 0 == [self.communicationDictionary objectForKey:@"someKey"]
+        )
+    {
+        self.testButton.hidden = YES;
+    }
+    
     [self.view addSubview:self.testButton];
     //--------------------------------------------------------------------------------------------//
     

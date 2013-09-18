@@ -2,6 +2,29 @@
 // toDo: App Icons 、 Launch Images ，程序图标和启动图的设定
 // 程序入口描述文件 （ 模版设定、默认着色设定等 ） 
 {
+    "Global_UIColor": {
+
+        "custom_color": [
+            52,
+            122,
+            162
+        ], 
+
+        "black": [
+            0,
+            0,
+            0
+        ], 
+
+        "white": [
+            255,
+            255,
+            255
+        ]
+
+    },
+
+
     // toDo:  type 增加 UIImage 类型的自定义导航栏图片、按钮、视图控制器背景图
     // k > 默认着色
     // v > 默认着色详细配置
@@ -16,12 +39,8 @@
                 "type": "UIColor",
 
                 // k > RGB 颜色
-                // v > 包含 RGB 数值的数组
-                "UIColor": [
-                    52,
-                    122,
-                    162
-                ]
+                // v > 包含 RGB 数值的数组 (或 自定义全局颜色的键)
+                "UIColor": "custom_color"
 
             }, 
             

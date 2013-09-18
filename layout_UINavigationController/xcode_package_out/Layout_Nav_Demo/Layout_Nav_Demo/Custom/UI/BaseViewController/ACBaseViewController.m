@@ -19,7 +19,7 @@
 
 - (void)backBtnPressed:(id)sender
 {
-    if (BVLT_PresentType == self.loadType)
+    if (BVLT_ModalType == self.loadType)
     {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
