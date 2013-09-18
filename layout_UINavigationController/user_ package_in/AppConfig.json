@@ -2,13 +2,29 @@
 // toDo: App Icons 、 Launch Images ，程序图标和启动图的设定
 // 程序入口描述文件 （ 模版设定、默认着色设定等 ） 
 {
+    // k > 全局颜色
+    // v > 全局颜色 详细配置
     "Global_UIColor": {
 
-        "custom_color": [
+        // k > 供全局文件使用的 颜色 key (唯一)
+        // v > 装有 RGB 颜色数值的 数组
+        "navBar_tintColor": [
             52,
             122,
             162
         ], 
+
+        "barButtonItem_tintColor": [
+            68,
+            156,
+            182
+        ],
+
+        "bg_color": [
+            232,
+            242,
+            250
+        ],
 
         "black": [
             0,
@@ -35,48 +51,26 @@
             "navBar_tintColor": {
 
                 // k > 着色类型
-                // v > RGB 颜色
-                "type": "UIColor",
+                // v > 全局颜色
+                "type": "Global_UIColor",
 
-                // k > RGB 颜色
-                // v > 包含 RGB 数值的数组 (或 自定义全局颜色的键)
-                "UIColor": "custom_color"
-
+                // k > 全局颜色
+                // v > 全局颜色 中的颜色 key
+                "Global_UIColor": "custom_color"
             }, 
             
             // k > 导航栏按钮的 默认着色
             // v > 导航栏按钮的 默认着色详细配置
             "barButtonItem_tintColor": {
-
-                // k > 着色类型
-                // v > RGB 颜色
-                "type": "UIColor",
-
-                // k > RGB 颜色
-                // v > 包含 RGB 数值的数组
-                "UIColor": [
-                    68,
-                    156,
-                    182
-                ]
-
+                "type": "Global_UIColor",
+                "Global_UIColor": "barButtonItem_tintColor"
             }, 
 
             // k > 视图控制器的 默认背景色
             // v > 导航栏按钮的 默认着色详细配置
             "bg_color": {
-
-                // k > 背景色类型
-                // v > RGB 颜色
-                "type": "UIColor",
-
-                // k > RGB 颜色
-                // v > 包含 RGB 数值的数组
-                "UIColor": [
-                    232,
-                    242,
-                    250
-                ]
+                "type": "Global_UIColor",
+                "Global_UIColor": "bg_color"
             } 
 
     },
