@@ -1,10 +1,21 @@
-// 视图控制器 描述文件
+
 {
-    "title": "New Page",
+	"head": {
 
-    "subviews": [
-        
+        "type": "UIViewController"
 
-    ]
+    },
+
+
+	"content": {
+
+		"title": "New Page",
+
+	    "subviews": [
+	        
+
+	    ]
+	}
+    
     
 }

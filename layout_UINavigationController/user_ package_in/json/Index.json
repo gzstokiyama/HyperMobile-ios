@@ -1,265 +1,277 @@
-// 视图控制器 描述文件
+
 {
-    // k > 视图控制器的 背景色 (会覆盖默认背景色)
-    // v > 背景色详细配置 (具体同 AppConfig 中的说明)
-    "bg_color": {
-        "type": "UIColor",
-        "UIColor": [
-            232,
-            242,
-            250
-        ]
-    },
-    /**
-     *    设置视图控制器背景色 写入代码的步骤
-     *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.view.backgroundColor = RGBCOLOR(232, 242, 250);
-     */
+    
+    "head": {
 
+        // k > 类型
+        // v > 此 json 文件的类型 （ UIViewController 视图控制器
+        "type": "UIViewController",
 
-    // k > 该视图控制器的导航栏标题
-    // v > 标题字符串
-    "title": "Index",
-    /**
-     *    设置导航栏标题 写入代码的步骤
-     *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.title = @"Index";
-     */
-
-
-    // k > 导航栏的 着色  (会覆盖默认导航栏着色)
-    // v > 着色详细配置 (具体同 AppConfig 中的说明)
-    "navBar_tintColor": {
-        "type": "UIColor",
-        "UIColor": [
-            52,
-            112,
-            162
-        ]
-    }, 
-    /**
-     *    设置导航栏着色 写入代码的步骤
-     *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.navigationController.navigationBar.tintColor = RGBCOLOR(52, 112, 162);
-     */
-
-
-    // k > 导航栏的 左右 按钮
-    // v > 按钮详细配置
-    "nav_btn":[
-        {
-            // k > 标识是左按钮还是右按钮
-            // v > ( 0-左, 1-右 )
-            "position": 0,
-
-            // k > 导航栏按钮的着色 (会覆盖默认导航栏按钮的着色)
-            // v > 着色详细配置 (具体同 AppConfig 中的说明)
-            "barButtonItem_tintColor": {
-                "type": "UIColor",
-                "UIColor": [
-                    62,
-                    132,
-                    182
-                ]
-            }, 
-
-            // k > 按钮文字
-            // v > 文字字符串
-            "title": "left",
-
-            // k > 动作
-            // v > 动作详细配置
-            "action": {
-
-                // k > 事件
-                // v > 事件类型 ( UIAlertView )
-                "event": "UIAlertView", 
-
-                // k > UIAlertView 标题
-                // v > 标题字符串
-                "title": "标题",
-
-                // k > UIAlertView 显示内容
-                // v > 内容字符串
-                "message": "警告的内容",
-                
-                // k > UIAlertView 的按钮
-                // v > 按钮详细配置
-                "items": [
-                    {
-                        // k > UIAlertView 按钮类型
-                        // v > 取消按钮
-                        "type": "cancelButtonItem", 
-
-                        // k > 按钮文字
-                        // v > 文字字符串
-                        "label": "OK"
-                    } 
-                ]
+        // k > 脚本 (ViewController 中事件的 逻辑)
+        // v > 引入的脚本的文件路径
+        "script": [
+            {
+                "path": "Index.js"
             }
+        ], 
 
+        // k > 自定义视图  
+        // v > 引入的自定义视图的文件路径
+        "views": [
+            {
+                //(在 content -> subviews 中建立 自定义视图时 class_name 为文件名加 JView 后缀，如 CustomDetailJView )
+                "type": "UIView",
+                "path": "somePath/CustomDetail.json"
+            }, 
+            {
+                //(在 content -> subviews 中建立 自定义表视图单元时 class_name 为文件名加 JCell 后缀，如 SchoolListJCell )
+                "type": "UITableViewCell",
+                "path": "somePath/SchoolList.json"
+            }
+        ]
+
+    },
+
+
+    "content": {
+        // k > 视图控制器的 背景色 (会覆盖默认背景色)
+        // v > 背景色详细配置 (具体同 AppConfig 中的说明)
+        "bg_color": {
+            "type": "UIColor",
+            "UIColor": [
+                232,
+                242,
+                250
+            ]
         },
         /**
-         *    导航栏左按钮 写入代码的步骤
-         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  leftItem  注释块中内容
-         *    2. 在 IndexJViewController.m 文件 中添加 - (void)leftBarButtonItemPressed:(UIBarButtonItem *)barButtonItem 方法块
-         *    3. 该方法块中为 UIAlertView 事件，待完成
+         *    设置视图控制器背景色 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.view.backgroundColor = RGBCOLOR(232, 242, 250);
          */
 
 
-        {
-            // k > 标识是左按钮还是右按钮
-            // v > ( 0-左, 1-右 )
-            "position": 1,
-
-            // k > 按钮文字
-            // v > 文字字符串
-            "title": "right",
-
-            // k > 动作
-            // v > 动作详细配置
-            "action": null
-        }
+        // k > 该视图控制器的导航栏标题
+        // v > 标题字符串
+        "title": "Index",
         /**
-         *    导航栏右按钮 写入代码的步骤
-         *    1. 同左按钮相关代码，只是 leftBarButtonItem 全换成 rightBarButtonItem , 暂留空
-         */
-
-    ],
-
-    // k > 视图控制器的 子视图
-    // v > 动作详细配置
-    "subviews": [
-        {
-            // k > 类名
-            // v > UILabel
-            "class_name": "UILabel",
-
-            // k > 变量名
-            // v > testLabel
-            "var_name": "testLabel",
-
-            // k > 坐标
-            // v > x,y,w,h
-            "frame": [
-                10,
-                10,
-                160,
-                40
-            ],
-
-            // k > UILabel 背景色
-            // v > 颜色详细配置
-            "bg_color":{
-
-                // k > 背景色类型
-                // v > 透明色 [UIColor clearColor]
-                "type": "clearColor"
-            },
-
-            // k > 标签文字
-            // v > 文字字符串
-            "title": "测试 UILabel",
-            
-            // k > 标签字体
-            // v > 字体详细配置
-            "font": {
-
-                // k > 是否粗体
-                // v > ( 0-否, 1-是 )
-                "bold": 1,
-
-                // k > 字体大小
-                // v > 大小数值
-                "size": 18,
-
-                // k > 字体颜色
-                // v > 包含 RGB 数值的数组
-                "color":[
-                    0,
-                    0,
-                    0
-                ]
-            },
-
-            // k > 标签文字对齐方式
-            // v > NSTextAlignmentCenter 居中 
-            "textAlignment": "NSTextAlignmentCenter"
-        },
-        /**
-         *    UILabel 写入代码的步骤
-         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UILabel  注释块中内容
+         *    设置导航栏标题 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.title = @"Index";
          */
 
 
-        {
-            "class_name": "UIImageView",
-            "var_name": "testImageView",
-            "frame": [
-                30,
-                70,
-                150,
-                150
-            ],
-
-            // k > 图片文件
-            // v > 图片文件路径
-            "image": "test_image",
-
-            // k > 显示模式
-            // v > 保持比例自适应，有可能裁剪
-            "contentMode": "UIViewContentModeScaleAspectFill",
-
-            // k > 圆角圆度
-            // v > 圆度数字
-            "radius": 5
-            
+        // k > 导航栏的 着色  (会覆盖默认导航栏着色)
+        // v > 着色详细配置 (具体同 AppConfig 中的说明)
+        "navBar_tintColor": {
+            "type": "UIColor",
+            "UIColor": [
+                52,
+                112,
+                162
+            ]
         }, 
         /**
-         *    UIImageView 写入代码的步骤
-         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UIImageView  注释块中内容
+         *    设置导航栏着色 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.navigationController.navigationBar.tintColor = RGBCOLOR(52, 112, 162);
          */
 
 
-        {
-            "class_name": "UIButton",
-            "var_name": "testButton",
-            "frame": [
-                150,
-                260,
-                100,
-                36
-            ],
+        // k > 导航栏的 左右 按钮
+        // v > 按钮详细配置
+        "nav_btn":[
+            {
+                // k > 标识是左按钮还是右按钮
+                // v > ( 0-左, 1-右 )
+                "position": 0,
 
-            "bg_color": {
-                "type": "UIImage",
-                "file_name": "btn"
+                // k > 导航栏按钮的着色 (会覆盖默认导航栏按钮的着色)
+                // v > 着色详细配置 (具体同 AppConfig 中的说明)
+                "barButtonItem_tintColor": {
+                    "type": "UIColor",
+                    "UIColor": [
+                        62,
+                        132,
+                        182
+                    ]
+                }, 
+
+                // k > 按钮文字
+                // v > 文字字符串
+                "title": "left",
+
+                // k > 动作
+                // v > 动作详细配置
+                "action": "testAlert();"
             },
+            /**
+             *    导航栏左按钮 写入代码的步骤
+             *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  leftItem  注释块中内容
+             *    2. 在 IndexJViewController.m 文件 中添加 - (void)leftBarButtonItemPressed:(UIBarButtonItem *)barButtonItem 方法块
+             *    3. 该方法块中为 UIAlertView 事件，待完成
+             */
 
-            "title": "新页面",
+
+            {
+                // k > 标识是左按钮还是右按钮
+                // v > ( 0-左, 1-右 )
+                "position": 1,
+
+                // k > 按钮文字
+                // v > 文字字符串
+                "title": "right",
+
+                // k > 动作
+                // v > 动作详细配置
+                "action": "testPush();"
+            }
+            /**
+             *    导航栏右按钮 写入代码的步骤
+             *    1. 同左按钮相关代码，只是 leftBarButtonItem 全换成 rightBarButtonItem , 暂留空
+             */
+
+        ],
+
+        // k > 视图控制器的 子视图
+        // v > 动作详细配置
+        "subviews": [
+            {
+                // k > 类名
+                // v > UILabel
+                "class_name": "UILabel",
+
+                // k > 变量名
+                // v > testLabel
+                "var_name": "testLabel",
+
+                // k > 坐标
+                // v > x,y,w,h
+                "frame": [
+                    10,
+                    10,
+                    160,
+                    40
+                ],
+
+                // k > UILabel 背景色
+                // v > 颜色详细配置
+                "bg_color":{
+
+                    // k > 背景色类型
+                    // v > 透明色 [UIColor clearColor]
+                    "type": "clearColor"
+                },
+
+                // k > 标签文字
+                // v > 文字字符串
+                "title": "测试 UILabel",
                 
-            "font": {
-                "bold": 0,
-                "size": 22,
-                "color": [
-                    255,
-                    255,
-                    255
-                ]
+                // k > 标签字体
+                // v > 字体详细配置
+                "font": {
+
+                    // k > 是否粗体
+                    // v > ( 0-否, 1-是 )
+                    "bold": 1,
+
+                    // k > 字体大小
+                    // v > 大小数值
+                    "size": 18,
+
+                    // k > 字体颜色
+                    // v > 包含 RGB 数值的数组
+                    "color":[
+                        0,
+                        0,
+                        0
+                    ]
+                },
+
+                // k > 标签文字对齐方式
+                // v > NSTextAlignmentCenter 居中 
+                "textAlignment": "NSTextAlignmentCenter"
             },
+            /**
+             *    UILabel 写入代码的步骤
+             *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UILabel  注释块中内容
+             */
 
-            "action": "testPush();"
-        }
-        /**
-         *    UIButton 写入代码的步骤
-         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UIButton  注释块中内容
-         *    2. 解析用户生成的 Index.js 脚本， 追踪方法名 testPush() 
-         *    3. pushTo(jsonFile) 可作为 功能函数， 对应 objc pushViewController 方法。
-         *    4. newPage/NewPage.json 是新页面的 json 描述文件
-         *    5. 在 IndexJViewController.m 文件 头部导入 该视图控制器类  #import "NewPageJViewController.h" (暂定类名，命名规则为 json 文件 加 JViewController)
-         *    6. 在 IndexJViewController.m 文件 中添加 testButtonPressed 方法块及相关代码，见项目代码中内容
-         *    7. 生成 NewPageJViewController 类 (先生成前面的代码，还是先生成此类，顺序待定)
-         */   
 
+            {
+                "class_name": "UIImageView",
+                "var_name": "testImageView",
+                "frame": [
+                    30,
+                    70,
+                    150,
+                    150
+                ],
+
+                // k > 图片文件
+                // v > 图片文件路径
+                "image": "test_image",
+
+                // k > 显示模式
+                // v > 保持比例自适应，有可能裁剪
+                "contentMode": "UIViewContentModeScaleAspectFill",
+
+                // k > 圆角圆度
+                // v > 圆度数字
+                "radius": 5
+                
+            }, 
+            /**
+             *    UIImageView 写入代码的步骤
+             *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UIImageView  注释块中内容
+             */
+
+
+            {
+                "class_name": "UIButton",
+                "var_name": "testButton",
+                "frame": [
+                    150,
+                    260,
+                    100,
+                    36
+                ],
+
+                "bg_color": {
+                    "type": "UIImage",
+                    "file_name": "btn"
+                },
+
+                "title": "新页面",
+                    
+                "font": {
+                    "bold": 0,
+                    "size": 22,
+                    "color": [
+                        255,
+                        255,
+                        255
+                    ]
+                },
+
+                "action": "testPush();"
+            }
+            /**
+             *    UIButton 写入代码的步骤
+             *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码  UIButton  注释块中内容
+             *    2. 解析用户生成的 Index.js 脚本， 追踪方法名 testPush() 
+             *    3. pushTo(jsonFile) 可作为 功能函数， 对应 objc pushViewController 方法。
+             *    4. newPage/NewPage.json 是新页面的 json 描述文件
+             *    5. 在 IndexJViewController.m 文件 头部导入 该视图控制器类  #import "NewPageJViewController.h" (暂定类名，命名规则为 json 文件 加 JViewController)
+             *    6. 在 IndexJViewController.m 文件 中添加 testButtonPressed 方法块及相关代码，见项目代码中内容
+             *    7. 生成 NewPageJViewController 类 (先生成前面的代码，还是先生成此类，顺序待定)
+             */   
+
+            
+
+        ]
         
+    }
 
-    ]
-    
+
 }
+
+
+
