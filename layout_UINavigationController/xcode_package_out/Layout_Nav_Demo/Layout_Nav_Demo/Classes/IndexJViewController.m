@@ -46,6 +46,8 @@
         
     self.navigationController.navigationBar.tintColor = RGBCOLOR(52, 112, 162);
     
+    self.navigationController.navigationBar.barTintColor = RGBCOLOR(6, 22, 82);
+    
     //-- leftItem ----------------------------------------------------------------------------------
     UIBarButtonItem *leftButtonItem =
     [[UIBarButtonItem alloc]initWithTitle:@"left"
@@ -66,7 +68,7 @@
     
     //-- UILabel -----------------------------------------------------------------------------------
     self.testLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.f,
-                                                               10.f,
+                                                               74.f,
                                                                160.f,
                                                                40.f)];
     self.testLabel.font = [UIFont boldSystemFontOfSize:18.0];
@@ -81,7 +83,7 @@
     
     //-- UIImageView -------------------------------------------------------------------------------
     self.testImageView = [[UIImageView alloc] initWithFrame:CGRectMake(30.f,
-                                                                       70.f,
+                                                                       144.f,
                                                                        150,
                                                                        150)];
     self.testImageView.image = PNGIMAGE(@"test_image");
@@ -96,7 +98,7 @@
     
     //-- UIButton ----------------------------------------------------------------------------------
     self.testButton = [[UIButton alloc] initWithFrame:CGRectMake(150.f,
-                                                                 260.f,
+                                                                 324.f,
                                                                  100.f,
                                                                  36.f)];
     [self.testButton setBackgroundImage:PNGIMAGE(@"btn")

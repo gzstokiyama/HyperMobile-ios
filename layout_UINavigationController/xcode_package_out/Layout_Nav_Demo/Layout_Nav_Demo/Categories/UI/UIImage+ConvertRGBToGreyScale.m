@@ -72,7 +72,7 @@
                                                   8,      // bits per component
                                                   0,
                                                   colorSpace,
-                                                  kCGImageAlphaNone);
+                                                  (CGBitmapInfo)kCGImageAlphaNone);
     
     CGColorSpaceRelease(colorSpace);
     
