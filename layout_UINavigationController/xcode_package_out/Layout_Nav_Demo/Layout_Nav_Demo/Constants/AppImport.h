@@ -26,6 +26,9 @@
 
 //** 类别 *******************************************************************************************
 
+/** 导航栏 Title 文字颜色 */
+#import "UINavigationBar+TitleTextColor.h"
+
 /** 图片缩放 */
 #import "UIImage+ReSizeMethods.h"
 

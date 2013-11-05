@@ -22,6 +22,9 @@
     
     self.title = @"New Page";
     
+    
+    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
 }
 
 - (void)didReceiveMemoryWarning

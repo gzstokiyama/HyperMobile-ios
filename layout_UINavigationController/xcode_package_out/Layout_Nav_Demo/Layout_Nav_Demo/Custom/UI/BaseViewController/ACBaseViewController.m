@@ -40,9 +40,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
     //-- 导航栏 ------------------------------------------------------------------------------------
-    self.navigationController.navigationBar.tintColor = C_NavBarTintColor;
-    [[UIBarButtonItem appearance] setTintColor:C_BarButtonItemTintColor];
+    //self.navigationController.navigationBar.tintColor = C_NavBarTintColor;
+    //[[UIBarButtonItem appearance] setTintColor:C_BarButtonItemTintColor];
+    
     
     //---------------------------------------------------------------------------------------------;
     

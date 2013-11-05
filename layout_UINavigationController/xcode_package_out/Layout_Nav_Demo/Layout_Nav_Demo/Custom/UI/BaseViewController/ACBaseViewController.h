@@ -16,6 +16,25 @@ enum EM_BaseVC_LoadType
 
 @interface ACBaseViewController : UIViewController
 
+
+//** 如果处于导航栏视图中，记录各个ViewController的配色 **************************************************
+
+/** 状态栏颜色 (NO: UIStatusBarStyleDefault , YES: UIStatusBarStyleLightContent) */
+@property (nonatomic) BOOL *lightStatusBarColor;
+
+/** 导航栏背景颜色 */
+@property (strong, nonatomic) UIColor *navigationBarBarTintColor;
+
+/** 导航栏标题颜色 */
+@property (strong, nonatomic) UIColor *navigationBarTitleTextTintColor;
+
+/** 导航栏交互文字颜色 */
+@property (strong, nonatomic) UIColor *navigationBarActionTextTintColor;
+
+
+//************************************************************************************************//
+
+
 /** 用于界面之间通信的 键值对 */
 @property (strong, nonatomic) NSDictionary *communicationDictionary;
 

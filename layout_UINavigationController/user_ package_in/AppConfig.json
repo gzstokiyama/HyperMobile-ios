@@ -8,7 +8,7 @@
 
         // k > 供全局文件使用的 颜色 key (唯一)
         // v > 装有 RGB 颜色数值的 数组
-        "navBar_tintColor": [
+        "navBar_barTintColor": [
             52,
             122,
             162
@@ -46,24 +46,37 @@
     // v > 默认着色详细配置
     "default_color": {
             
-            // k > 导航栏的 默认着色
-            // v > 导航栏的 默认着色详细配置
-            "navBar_tintColor": {
+            // k > 导航栏的 着色 (会覆盖默认导航栏着色)
+            // v > 着色详细配置 (具体同 AppConfig 中的说明)
+            "navBar_barTintColor": {
 
-                // k > 着色类型
-                // v > 全局颜色
-                "type": "Global_UIColor",
-
-                // k > 全局颜色
-                // v > 全局颜色 中的颜色 key
-                "Global_UIColor": "custom_color"
+                // k > 导航栏的 着色形式 ( image 自定义导航栏背景图、 thin 淡色如系统默认的透明度、 thick 加深，更接近给出的RGB颜色)
+                // v > 着色详细配置 
+                "mold": "image",
+                "type": "UIImage",
+                "path": "somePath/navbar.png"
             }, 
-            
-            // k > 导航栏按钮的 默认着色
-            // v > 导航栏按钮的 默认着色详细配置
-            "barButtonItem_tintColor": {
-                "type": "Global_UIColor",
-                "Global_UIColor": "barButtonItem_tintColor"
+
+            // k > 导航栏标题栏 Title 文字的 着色 (会覆盖默认导航栏着色)
+            // v > 着色详细配置 (具体同 AppConfig 中的说明)
+            "navBar_titleColor": {
+                "type": "UIColor",
+                "UIColor": [
+                    52,
+                    112,
+                    162
+                ]
+            },
+
+            // k > 导航栏上 Items 按钮文字的 着色 (会覆盖默认导航栏着色)
+            // v > 着色详细配置 (具体同 AppConfig 中的说明)
+            "navBar_items": {
+                "type": "UIColor",
+                "UIColor": [
+                    52,
+                    112,
+                    162
+                ]
             }, 
 
             // k > 视图控制器的 默认背景色
@@ -81,17 +94,78 @@
      */
 
 
+    // k > 在同一导航栏视图控制器中 以 push 形式弹出的下一级视图控制器中的 返回按钮 样式
+    // v > 详细配置 
+    "popBackButton": {
+
+        // k > 类型 (original : 系统默认带文字的样式；image : 自定义返回按钮图片)
+        // v > 着色详细配置 
+        "mold": "image",
+
+        "path": "imgs/backBtn.png"
+    }, 
+    /**
+     *    设置返回按钮 样式 写入代码的步骤
+     *    1. original 则什么都不用做
+     *    2. image 需把 path 路径的图片拷至项目中 images 文件夹，并在 AppDelegate.m 文件中 didFinishLaunchingWithOptions 回调方法代码块中 添加 37-41 行的代码 
+     */
+
+
     // k > 模版设定
     // v > 模版详细配置
     "template": {
 
         // k > 模版 类型
-        // v > UINavigationController 为主视图的模版
+        // v > 以 UINavigationController 为 appRootViewController
         "type": "UINavigationController", 
 
-        // k > UINavigationController 的 根视图控制器
-        // v > 根视图控制器的 json 描述文件的 路径。
-        "rootViewController": "json/Index.json"
+        // k > app 的 根视图控制器
+        // v > 根视图控制器的 详细配置
+        "rootViewController": {
+
+            // k > UINavigationController 的 根视图控制器
+            // v > 根视图控制器的 json 描述文件的 路径。
+            "path": "json/Index.json",
+
+            // k > 导航栏的 着色 (会覆盖默认导航栏着色)
+            // v > 着色详细配置 (具体同 AppConfig 中的说明)
+            "navBar_barTintColor": {
+
+                // k > 导航栏的 着色
+                // v > 着色详细配置 
+                "type": "UIColor",
+                "UIColor": [
+                    52,
+                    112,
+                    162
+                ]
+            }, 
+
+            // k > 导航栏标题栏 Title 文字的 着色 (会覆盖默认导航栏着色)
+            // v > 着色详细配置 (具体同 AppConfig 中的说明)
+            "navBar_titleColor": {
+                "type": "UIColor",
+                "UIColor": [
+                    52,
+                    112,
+                    162
+                ]
+            },
+
+            // k > 导航栏上 Items 按钮文字的 着色 (会覆盖默认导航栏着色)
+            // v > 着色详细配置 (具体同 AppConfig 中的说明)
+            "navBar_items": {
+                "type": "UIColor",
+                "UIColor": [
+                    52,
+                    112,
+                    162
+                ]
+            }
+
+        }
+        
+
         
     } 
     /**

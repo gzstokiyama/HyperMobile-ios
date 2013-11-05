@@ -59,40 +59,13 @@
          */
 
 
-        // k > 导航栏的 着色  (会覆盖默认导航栏着色)
-        // v > 着色详细配置 (具体同 AppConfig 中的说明)
-        "navBar_tintColor": {
-            "type": "UIColor",
-            "UIColor": [
-                52,
-                112,
-                162
-            ]
-        }, 
-        /**
-         *    设置导航栏着色 写入代码的步骤
-         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.navigationController.navigationBar.tintColor = RGBCOLOR(52, 112, 162);
-         */
-
-
         // k > 导航栏的 左右 按钮
         // v > 按钮详细配置
         "nav_btn":[
             {
                 // k > 标识是左按钮还是右按钮
                 // v > ( 0-左, 1-右 )
-                "position": 0,
-
-                // k > 导航栏按钮的着色 (会覆盖默认导航栏按钮的着色)
-                // v > 着色详细配置 (具体同 AppConfig 中的说明)
-                "barButtonItem_tintColor": {
-                    "type": "UIColor",
-                    "UIColor": [
-                        62,
-                        132,
-                        182
-                    ]
-                }, 
+                "position": 0, 
 
                 // k > 按钮文字
                 // v > 文字字符串
@@ -207,7 +180,7 @@
 
                 // k > 图片文件
                 // v > 图片文件路径
-                "image": "test_image",
+                "path": "somePath/test_image.png",
 
                 // k > 显示模式
                 // v > 保持比例自适应，有可能裁剪
