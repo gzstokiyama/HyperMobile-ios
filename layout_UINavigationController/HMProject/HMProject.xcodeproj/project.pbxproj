@@ -42,6 +42,7 @@
 		50B5FE791809267A009A874E /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B5FE661809267A009A874E /* UIImageView+AFNetworking.m */; };
 		50B5FE7A1809267A009A874E /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B5FE691809267A009A874E /* UIProgressView+AFNetworking.m */; };
 		50B5FE7B1809267A009A874E /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B5FE6B1809267A009A874E /* UIWebView+AFNetworking.m */; };
+		50CA2DC8182A314B00C8E0C3 /* UINavigationBar+TitleTextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CA2DC7182A314B00C8E0C3 /* UINavigationBar+TitleTextColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,8 @@
 		50B5FE691809267A009A874E /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		50B5FE6A1809267A009A874E /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		50B5FE6B1809267A009A874E /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		50CA2DC6182A314B00C8E0C3 /* UINavigationBar+TitleTextColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TitleTextColor.h"; sourceTree = "<group>"; };
+		50CA2DC7182A314B00C8E0C3 /* UINavigationBar+TitleTextColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TitleTextColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				501D37CF18091F790049E409 /* UIAlertView&UIActionSheet+Blocks */,
+				50CA2DC6182A314B00C8E0C3 /* UINavigationBar+TitleTextColor.h */,
+				50CA2DC7182A314B00C8E0C3 /* UINavigationBar+TitleTextColor.m */,
 				501D37D618091F790049E409 /* UIImage+ConvertRGBToGreyScale.h */,
 				501D37D718091F790049E409 /* UIImage+ConvertRGBToGreyScale.m */,
 				501D37D818091F790049E409 /* UIImage+ReSizeMethods.h */,
@@ -474,6 +479,7 @@
 				50B5FE761809267A009A874E /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				50B5FE7A1809267A009A874E /* UIProgressView+AFNetworking.m in Sources */,
 				501D37FE18091F790049E409 /* MBProgressHUD.m in Sources */,
+				50CA2DC8182A314B00C8E0C3 /* UINavigationBar+TitleTextColor.m in Sources */,
 				50B5FE7B1809267A009A874E /* UIWebView+AFNetworking.m in Sources */,
 				50B5FE6E1809267A009A874E /* AFHTTPSessionManager.m in Sources */,
 				501D37FA18091F790049E409 /* ACBaseViewController.m in Sources */,
