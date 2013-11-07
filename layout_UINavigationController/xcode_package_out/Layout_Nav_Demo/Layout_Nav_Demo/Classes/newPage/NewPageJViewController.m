@@ -15,6 +15,31 @@
 
 @implementation NewPageJViewController
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        //-- 状态栏文字颜色 --------------------------------------------------------------------------
+        //self.lightStatusBarColor = NO;
+        //-----------------------------------------------------------------------------------------;
+        
+        
+        //-- 导航栏各种着色 --------------------------------------------------------------------------
+        
+        // 导航栏背景色
+        self.navigationBarBarTintColor = RGBCOLOR(52, 122, 162);
+        
+        // 互动按钮 文字 颜色
+        self.navigationBarActionItemTintColor = RGBCOLOR(0, 0, 0);
+        
+        // 导航栏 Title 文字 颜色
+        self.navigationBarTitleTextTintColor = RGBCOLOR(0, 0, 0);
+        //-----------------------------------------------------------------------------------------;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

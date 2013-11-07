@@ -11,6 +11,51 @@
 
 		"title": "New Page",
 
+		// k > 状态栏颜色
+        // v > 颜色详细配置 ( white : 白色文字 ；  black : 黑色文字 ) 不写此 key 会默认为黑色文字
+        "statusBarText":"black",
+        /**
+         *    设置导航栏标题 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+         */
+
+        // k > 导航栏的 着色
+        // v > 着色详细配置
+        "navBar_barTintColor": {
+
+            // k > 导航栏的 着色
+            // v > 着色详细配置 
+            "type": "UIColor",
+            "UIColor": [
+                52,
+                122,
+                162
+            ]
+        }, 
+
+        // k > 导航栏上 Items 按钮文字的 着色
+        // v > 着色详细配置 
+        "navBar_ActionItemColor": {
+            "type": "UIColor",
+            "UIColor": [
+                0,
+                0,
+                0
+            ]
+        },
+
+        // k > 导航栏标题栏 Title 文字的 着色
+        // v > 着色详细配置 
+        "navBar_titleColor": {
+            "type": "UIColor",
+            "UIColor": [
+                0,
+                0,
+                0
+            ]
+        },
+
+
 	    "subviews": [
 	        
 

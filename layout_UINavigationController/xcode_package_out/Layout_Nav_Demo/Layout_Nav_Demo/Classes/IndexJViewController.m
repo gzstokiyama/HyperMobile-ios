@@ -34,27 +34,44 @@
 
 #pragma mark - LifeCycle
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        //-- 状态栏文字颜色 --------------------------------------------------------------------------
+        self.lightStatusBarColor = YES;
+        //-----------------------------------------------------------------------------------------;
+        
+        
+        //-- 导航栏各种着色 --------------------------------------------------------------------------
+        
+        // 导航栏背景色
+        self.navigationBarBarTintColor = C_custom_barTintColor;
+        
+        // 互动按钮 文字 颜色
+        self.navigationBarActionItemTintColor = C_custom_barActionItemColor;
+        
+        // 导航栏 Title 文字 颜色
+        self.navigationBarTitleTextTintColor = C_custom_barTitleColor;
+        //-----------------------------------------------------------------------------------------;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    //-- 状态栏 ------------------------------------------------------------------------------------
-    
-    //---------------------------------------------------------------------------------------------;
+    self.title = @"Index";
     
     //-- 背景色 ------------------------------------------------------------------------------------
     self.view.backgroundColor = RGBCOLOR(232, 242, 250);
     //---------------------------------------------------------------------------------------------;
     
+    
     //** navBar ************************************************************************************
-    self.title = @"Index";
-    
-    
-        
-    self.navigationController.navigationBar.tintColor = RGBCOLOR(52, 112, 162);
-    
-    self.navigationController.navigationBar.barTintColor = RGBCOLOR(6, 22, 82);
     
     //-- leftItem ----------------------------------------------------------------------------------
     UIBarButtonItem *leftButtonItem =
@@ -63,7 +80,7 @@
                                    target:self
                                    action:@selector(leftBarButtonItemPressed:)];
     
-    leftButtonItem.tintColor = RGBCOLOR(62, 132, 182);
+    //leftButtonItem.tintColor = [UIColor greenColor];
     
     self.navigationItem.leftBarButtonItem = leftButtonItem;
     //--------------------------------------------------------------------------------------------//
@@ -136,12 +153,6 @@
     
     
     //********************************************************************************************//
-}
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
 

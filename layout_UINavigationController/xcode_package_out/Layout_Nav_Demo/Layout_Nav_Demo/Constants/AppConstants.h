@@ -8,13 +8,16 @@
 //* default_color **********************************************************************************
 #pragma mark - default_color
 
-#define C_NavBarTintColor                                                       \
-[UIColor colorWithRed:52  / 255.f green:122 / 255.f blue:162 / 255.f alpha:1.f]
+#define C_custom_barTintColor                                                       \
+[UIColor colorWithRed:100  / 255.f green:180 / 255.f blue:250 / 255.f alpha:1.f]
 
-#define C_BarButtonItemTintColor                                                \
-[UIColor colorWithRed:68  / 255.f green:156 / 255.f blue:182 / 255.f alpha:1.f]
+#define C_custom_barActionItemColor                                                 \
+[UIColor colorWithRed:240  / 255.f green:246 / 255.f blue:250 / 255.f alpha:1.f]
 
-#define C_BG_Color                                                              \
+#define C_custom_barTitleColor                                                      \
+[UIColor colorWithRed:255  / 255.f green:255 / 255.f blue:255 / 255.f alpha:1.f]
+
+#define C_BG_Color                                                                  \
 [UIColor colorWithRed:232 / 255.f green:242 / 255.f blue:250 / 255.f alpha:1.f]
 
 //************************************************************************************************//

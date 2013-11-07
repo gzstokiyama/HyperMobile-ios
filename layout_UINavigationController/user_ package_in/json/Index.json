@@ -34,6 +34,15 @@
 
 
     "content": {
+
+        // k > 该视图控制器的导航栏标题
+        // v > 标题字符串
+        "title": "Index",
+        /**
+         *    设置导航栏标题 写入代码的步骤
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.title = @"Index";
+         */
+
         // k > 视图控制器的 背景色 (会覆盖默认背景色)
         // v > 背景色详细配置 (具体同 AppConfig 中的说明)
         "bg_color": {
@@ -50,15 +59,39 @@
          */
 
 
-        // k > 该视图控制器的导航栏标题
-        // v > 标题字符串
-        "title": "Index",
+        // k > 状态栏颜色
+        // v > 颜色详细配置 ( white : 白色文字 ；  black : 黑色文字 ) 不写此 key 会默认为黑色文字
+        "statusBarText":"white",
         /**
          *    设置导航栏标题 写入代码的步骤
-         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 self.title = @"Index";
+         *    1. 在 IndexJViewController.m 文件 viewDidLoad 方法块中 添加代码 [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
          */
 
+        // k > 导航栏的 着色 
+        // v > 着色详细配置 
+        "navBar_barTintColor": {
 
+            // k > 导航栏的 着色
+            // v > 着色详细配置 
+            "type": "UIColor",
+            "UIColor": "custom_barTintColor"
+        }, 
+
+        // k > 导航栏上 Items 按钮文字的 着色 
+        // v > 着色详细配置 
+        "navBar_ActionItemColor": {
+            "type": "UIColor",
+            "UIColor": "custom_barActionItemColor"
+        },
+
+        // k > 导航栏标题栏 Title 文字的 着色 
+        // v > 着色详细配置 
+        "navBar_titleColor": {
+            "type": "UIColor",
+            "UIColor": "custom_barTitleColor"
+        },
+
+        
         // k > 导航栏的 左右 按钮
         // v > 按钮详细配置
         "nav_btn":[
@@ -152,9 +185,9 @@
                     // k > 字体颜色
                     // v > 包含 RGB 数值的数组
                     "color":[
-                        0,
-                        0,
-                        0
+                        80,
+                        80,
+                        80
                     ]
                 },
 

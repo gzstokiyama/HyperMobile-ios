@@ -15,25 +15,77 @@
 
 @implementation ACBaseViewController
 
-#pragma mark - Action Methods
 
-- (void)backBtnPressed:(id)sender
+- (void)viewWillAppear:(BOOL)animated
 {
-    if (BVLT_ModalType == self.loadType)
+    [super viewWillAppear:animated];
+    
+    
+    //** 状态栏文字黑白？导航栏底色、导航栏标题文字颜色、导航栏互动按钮文字颜色，恢复为四个属性指定的颜色 **********
+    //
+    
+    // 状态栏
+    if (self.lightStatusBarColor)
     {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    else if (BVLT_PushType == self.loadType)
-    {
-        [self.navigationController popViewControllerAnimated:YES];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     }
     else
     {
-        NSLog(@"error 未设置 视图控制器 加载方式");
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     }
+    
+    // 恢复导航栏底色
+    self.navigationController.navigationBar.barTintColor = self.navigationBarBarTintColor;
+    
+    // 恢复导航栏互动按钮文字颜色
+    self.navigationController.navigationBar.tintColor = self.navigationBarActionItemTintColor;
+    
+    // 如果没有指定颜色，则从 self.navigationBarTitleTextTintColor 自身容器中恢复颜色
+    if (!self.navigationBarTitleTextTintColor)
+    {
+        self.navigationController.navigationBar.titleTextAttributes = self.navigationBarTitleTextAttributes;
+    }
+    else
+    {
+        [self.navigationController.navigationBar doSetTitleTextColorBy:self.navigationBarTitleTextTintColor];
+    }
+    
 }
 
+- (void)viewDidDisappear:(BOOL)animated
+{
+    
+}
+
+
 #pragma mark - Life Cycle
+
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        // 如果用户没有指定该 视图控制器 的导航栏底色，则从前一个中取，即继承之前的颜色
+        if (!self.navigationBarBarTintColor)
+        {
+            self.navigationBarBarTintColor = self.navigationController.navigationBar.barTintColor;
+        }
+        
+        // 如果用户没有指定该 视图控制器 的导航栏互动按钮文字颜色，则从前一个中取，即继承之前的颜色
+        if (!self.navigationBarActionItemTintColor)
+        {
+            self.navigationBarActionItemTintColor = self.navigationController.navigationBar.tintColor;
+        }
+        
+        // 如果没有指定该 视图控制器 的 导航栏标题颜色，则从前一个取
+        if (!self.navigationBarTitleTextTintColor)
+        {
+           self.navigationBarTitleTextAttributes = self.navigationController.navigationBar.titleTextAttributes;
+        }
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {

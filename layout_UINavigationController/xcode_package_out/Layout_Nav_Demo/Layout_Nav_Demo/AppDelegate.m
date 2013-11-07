@@ -20,27 +20,11 @@
     
     //** 设定程序主视图控制器 *************************************************************************
     IndexJViewController *indexJVC = [[IndexJViewController alloc] init];
-    
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:indexJVC];
-    
-    //-- 导航栏各种着色 ------------------------------------------------------------------------------
-    
-    // 导航栏背景色
-    navController.navigationBar.barTintColor = C_NavBarTintColor;
-    
-    // 互动按钮 文字 颜色
-    navController.navigationBar.tintColor = [UIColor whiteColor];
-
-    // 导航栏 Title 文字 颜色
-    [navController.navigationBar doSetTitleTextColorBy:[UIColor whiteColor]];
-    //---------------------------------------------------------------------------------------------;
-    
-    
     
     
     self.window.rootViewController = navController;
     //********************************************************************************************//
-    
     
     
     //** 以 push 形式弹出的下一级视图控制器中的 返回按钮 自定义图片 ****************************************
@@ -49,7 +33,6 @@
     
     // 位移隐藏掉文字
     [UIBarButtonItem.appearance setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -64) forBarMetrics:UIBarMetricsDefault];
-    
     //*********************************************************************************************;
     
     
