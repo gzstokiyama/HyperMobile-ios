@@ -45,7 +45,7 @@
         // v > 着色详细配置 
         "mold": "image",
 
-        "path": "imgs/backBtn.png"
+        "path": "Images/nav_back.png"
     }, 
     /**
      *    设置返回按钮 样式 写入代码的步骤
