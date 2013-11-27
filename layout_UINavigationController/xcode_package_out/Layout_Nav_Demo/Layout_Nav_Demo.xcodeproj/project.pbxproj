@@ -31,8 +31,8 @@
 		506C7BE317E71739001CA478 /* test_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 506C7BE117E71739001CA478 /* test_image.png */; };
 		50B26BC71828EC37007D62E1 /* nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B26BC51828EC37007D62E1 /* nav_back.png */; };
 		50B26BC81828EC37007D62E1 /* nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B26BC61828EC37007D62E1 /* nav_back@2x.png */; };
-		50B26BD11828F895007D62E1 /* UINavigationBar+TitleTextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B26BD01828F895007D62E1 /* UINavigationBar+TitleTextColor.m */; };
 		50C9EC5417E7F71D00FA73FA /* NewPageJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50C9EC5317E7F71D00FA73FA /* NewPageJViewController.m */; };
+		50FC80B81844A3B500C19ABA /* UINavigationBar+TitleTextColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC80B71844A3B500C19ABA /* UINavigationBar+TitleTextColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,10 +79,10 @@
 		506C7BE117E71739001CA478 /* test_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_image.png; sourceTree = "<group>"; };
 		50B26BC51828EC37007D62E1 /* nav_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back.png; sourceTree = "<group>"; };
 		50B26BC61828EC37007D62E1 /* nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back@2x.png"; sourceTree = "<group>"; };
-		50B26BCF1828F895007D62E1 /* UINavigationBar+TitleTextColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+TitleTextColor.h"; path = "UIAlertView&UIActionSheet+Blocks/UINavigationBar+TitleTextColor.h"; sourceTree = "<group>"; };
-		50B26BD01828F895007D62E1 /* UINavigationBar+TitleTextColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+TitleTextColor.m"; path = "UIAlertView&UIActionSheet+Blocks/UINavigationBar+TitleTextColor.m"; sourceTree = "<group>"; };
 		50C9EC5217E7F71D00FA73FA /* NewPageJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPageJViewController.h; sourceTree = "<group>"; };
 		50C9EC5317E7F71D00FA73FA /* NewPageJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPageJViewController.m; sourceTree = "<group>"; };
+		50FC80B61844A3B500C19ABA /* UINavigationBar+TitleTextColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+TitleTextColor.h"; sourceTree = "<group>"; };
+		50FC80B71844A3B500C19ABA /* UINavigationBar+TitleTextColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+TitleTextColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,12 +188,12 @@
 			isa = PBXGroup;
 			children = (
 				506C7BB417E6EE24001CA478 /* UIAlertView&UIActionSheet+Blocks */,
-				50B26BCF1828F895007D62E1 /* UINavigationBar+TitleTextColor.h */,
-				50B26BD01828F895007D62E1 /* UINavigationBar+TitleTextColor.m */,
 				506C7BBB17E6EE24001CA478 /* UIImage+ConvertRGBToGreyScale.h */,
 				506C7BBC17E6EE24001CA478 /* UIImage+ConvertRGBToGreyScale.m */,
 				506C7BBD17E6EE24001CA478 /* UIImage+ReSizeMethods.h */,
 				506C7BBE17E6EE24001CA478 /* UIImage+ReSizeMethods.m */,
+				50FC80B61844A3B500C19ABA /* UINavigationBar+TitleTextColor.h */,
+				50FC80B71844A3B500C19ABA /* UINavigationBar+TitleTextColor.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -395,7 +395,7 @@
 				506C7BDD17E6EE24001CA478 /* UIPlaceHolderTextField.m in Sources */,
 				506C7BDE17E6EE24001CA478 /* UIPlaceHolderTextView.m in Sources */,
 				50C9EC5417E7F71D00FA73FA /* NewPageJViewController.m in Sources */,
-				50B26BD11828F895007D62E1 /* UINavigationBar+TitleTextColor.m in Sources */,
+				50FC80B81844A3B500C19ABA /* UINavigationBar+TitleTextColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

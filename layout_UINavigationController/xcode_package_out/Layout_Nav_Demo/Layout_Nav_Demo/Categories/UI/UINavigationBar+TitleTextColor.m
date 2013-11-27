@@ -10,4 +10,18 @@
 
 @implementation UINavigationBar (TitleTextColor)
 
+- (void)doSetTitleTextColorBy:(UIColor *)theColor
+{
+    NSDictionary *navBarTitleTextAttributes =
+    [NSDictionary dictionaryWithObjectsAndKeys:
+     
+     // 形参
+     theColor,
+     
+     NSForegroundColorAttributeName,
+     nil];
+    
+    [self setTitleTextAttributes:navBarTitleTextAttributes];
+}
+
 @end

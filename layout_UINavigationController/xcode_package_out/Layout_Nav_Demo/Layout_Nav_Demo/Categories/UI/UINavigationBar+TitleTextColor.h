@@ -10,4 +10,11 @@
 
 @interface UINavigationBar (TitleTextColor)
 
+/**
+ *  设置导航栏 title 文字颜色
+ *
+ *  @param theColor 颜色
+ */
+- (void)doSetTitleTextColorBy:(UIColor *)theColor;
+
 @end

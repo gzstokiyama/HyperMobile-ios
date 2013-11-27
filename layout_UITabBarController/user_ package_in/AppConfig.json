@@ -1,0 +1,82 @@
+{
+    "Global_UIColor": {
+
+        "custom_barTintColor": [
+            100,
+            180,
+            250
+        ], 
+
+        "custom_barActionItemColor": [
+            68,
+            156,
+            182
+        ],
+
+        "custom_barTitleColor": [
+            255,
+            255,
+            255
+        ],
+
+        "bg_color": [
+            232,
+            242,
+            250
+        ]
+
+    },
+
+
+    "popBackButton": {
+
+        "mold": "image",
+
+        "path": "imgs/backBtn.png"
+    }, 
+
+
+    "template": {
+
+        // k > 模版 类型
+        // v > 以 UITabBarController 为 appRootViewController
+        "type": "UITabBarController", 
+
+        // k > UITabBarController 的子视图控制器属性
+        // v > 子视图控制器的详细配置信息 (数组:最多5个)
+        "viewControllers": [
+
+            {
+                "type": "UINavigationController", 
+
+                // k > app 的 根视图控制器
+                // v > 根视图控制器的 详细配置
+                "rootViewController": {
+                    "path": "json/FirstTab.json"
+                }
+            },
+
+            {
+                "type": "UIViewController", 
+
+                // k > app 的 根视图控制器
+                // v > 根视图控制器的 详细配置
+                "path": "json/SecondTab.json"
+
+            }
+
+        ]
+
+        
+
+        
+    } 
+    /**
+     *    以导航视图为模版 写入代码的步骤
+     *    1. AppDelegate.h 如文件中内容
+     *    2. 在 AppDelegate.m 顶部添加文件导入代码 #import "IndexJViewController.h" (用来引用 导航视图的根视图类)
+     *    3. 在 AppDelegate.m 文件中 didFinishLaunchingWithOptions 回调方法代码块中 添加 22-53 行的代码
+     */
+    
+
+}
