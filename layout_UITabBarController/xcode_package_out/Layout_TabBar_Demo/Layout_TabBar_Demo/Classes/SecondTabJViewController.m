@@ -6,13 +6,13 @@
 //  Copyright (c) 2013年 Albert Chu. All rights reserved.
 //
 
-#import "SecondTabViewController.h"
+#import "SecondTabJViewController.h"
 
-@interface SecondTabViewController ()
+@interface SecondTabJViewController ()
 
 @end
 
-@implementation SecondTabViewController
+@implementation SecondTabJViewController
 
 - (id)init
 {

@@ -1,19 +1,19 @@
 {
     "Global_UIColor": {
 
-        "custom_barTintColor": [
+        "custom_navBarTintColor": [
             100,
             180,
             250
         ], 
 
-        "custom_barActionItemColor": [
+        "custom_navBarActionItemColor": [
             68,
             156,
             182
         ],
 
-        "custom_barTitleColor": [
+        "custom_navBarTitleColor": [
             255,
             255,
             255
@@ -32,7 +32,7 @@
 
         "mold": "image",
 
-        "path": "imgs/backBtn.png"
+        "path": "images/backBtn.png"
     }, 
 
 
@@ -49,24 +49,56 @@
             {
                 "type": "UINavigationController", 
 
-                // k > app 的 根视图控制器
-                // v > 根视图控制器的 详细配置
+                // k > 导航控制器 的 根视图控制器
+                // v > 根视图控制器的 详细信息
                 "rootViewController": {
                     "path": "json/FirstTab.json"
-                }
+                },
+
+                "title": "First",
+                "icon": "images/tabbar_icons/bubble.png"
             },
 
             {
                 "type": "UIViewController", 
+                "path": "json/SecondTab.json",
 
-                // k > app 的 根视图控制器
-                // v > 根视图控制器的 详细配置
-                "path": "json/SecondTab.json"
+                "title": "Second",
+                "icon": "images/tabbar_icons/cloud-download.png"
+            },
 
+            {
+                "type": "UINavigationController", 
+                "rootViewController": {
+                    "path": "json/ThirdTab.json"
+                },
+
+                "title": "Third",
+                "icon": "images/tabbar_icons/settings1.png"
             }
 
-        ]
+        ],
 
+
+        // 标签栏底色
+        "tabBar_barTintColor": {
+            "type": "UIColor",
+            "UIColor": [
+                250,
+                150,
+                30
+            ]
+        },
+
+        // 标签栏文字及图标颜色
+        "tabBar_tintColor": {
+            "type": "UIColor",
+            "UIColor": [
+                250,
+                250,
+                0
+            ]
+        }
         
 
         

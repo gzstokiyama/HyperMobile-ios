@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50676BBB1845F4B300741EA5 /* ThirdTabJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50676BBA1845F4B300741EA5 /* ThirdTabJViewController.m */; };
 		50FC80C61844A47700C19ABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC80C51844A47700C19ABA /* Foundation.framework */; };
 		50FC80C81844A47700C19ABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC80C71844A47700C19ABA /* CoreGraphics.framework */; };
 		50FC80CA1844A47700C19ABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC80C91844A47700C19ABA /* UIKit.framework */; };
@@ -33,7 +34,7 @@
 		50FC81291844A4EC00C19ABA /* UIPlaceHolderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC811A1844A4EC00C19ABA /* UIPlaceHolderTextField.m */; };
 		50FC812A1844A4EC00C19ABA /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC811D1844A4EC00C19ABA /* UIPlaceHolderTextView.m */; };
 		50FC812D1844A62900C19ABA /* FirstTabJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC812C1844A62900C19ABA /* FirstTabJViewController.m */; };
-		50FC81301844A63E00C19ABA /* SecondTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC812F1844A63E00C19ABA /* SecondTabViewController.m */; };
+		50FC81301844A63E00C19ABA /* SecondTabJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50FC812F1844A63E00C19ABA /* SecondTabJViewController.m */; };
 		50FC81381844B74F00C19ABA /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FC81321844B74F00C19ABA /* bubble.png */; };
 		50FC81391844B74F00C19ABA /* bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FC81331844B74F00C19ABA /* bubble@2x.png */; };
 		50FC813A1844B74F00C19ABA /* cloud-download.png in Resources */ = {isa = PBXBuildFile; fileRef = 50FC81341844B74F00C19ABA /* cloud-download.png */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50676BB91845F4B300741EA5 /* ThirdTabJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTabJViewController.h; sourceTree = "<group>"; };
+		50676BBA1845F4B300741EA5 /* ThirdTabJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTabJViewController.m; sourceTree = "<group>"; };
 		50FC80C21844A47700C19ABA /* Layout_TabBar_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layout_TabBar_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FC80C51844A47700C19ABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50FC80C71844A47700C19ABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,8 +101,8 @@
 		50FC811D1844A4EC00C19ABA /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		50FC812B1844A62900C19ABA /* FirstTabJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTabJViewController.h; sourceTree = "<group>"; };
 		50FC812C1844A62900C19ABA /* FirstTabJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstTabJViewController.m; sourceTree = "<group>"; };
-		50FC812E1844A63E00C19ABA /* SecondTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTabViewController.h; sourceTree = "<group>"; };
-		50FC812F1844A63E00C19ABA /* SecondTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTabViewController.m; sourceTree = "<group>"; };
+		50FC812E1844A63E00C19ABA /* SecondTabJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondTabJViewController.h; sourceTree = "<group>"; };
+		50FC812F1844A63E00C19ABA /* SecondTabJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondTabJViewController.m; sourceTree = "<group>"; };
 		50FC81321844B74F00C19ABA /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		50FC81331844B74F00C19ABA /* bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble@2x.png"; sourceTree = "<group>"; };
 		50FC81341844B74F00C19ABA /* cloud-download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-download.png"; sourceTree = "<group>"; };
@@ -248,8 +251,10 @@
 			children = (
 				50FC812B1844A62900C19ABA /* FirstTabJViewController.h */,
 				50FC812C1844A62900C19ABA /* FirstTabJViewController.m */,
-				50FC812E1844A63E00C19ABA /* SecondTabViewController.h */,
-				50FC812F1844A63E00C19ABA /* SecondTabViewController.m */,
+				50FC812E1844A63E00C19ABA /* SecondTabJViewController.h */,
+				50FC812F1844A63E00C19ABA /* SecondTabJViewController.m */,
+				50676BB91845F4B300741EA5 /* ThirdTabJViewController.h */,
+				50676BBA1845F4B300741EA5 /* ThirdTabJViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -480,11 +485,12 @@
 				50FC80D21844A47700C19ABA /* main.m in Sources */,
 				50FC811F1844A4EC00C19ABA /* UIActionSheet+Blocks.m in Sources */,
 				50FC81231844A4EC00C19ABA /* UINavigationBar+TitleTextColor.m in Sources */,
-				50FC81301844A63E00C19ABA /* SecondTabViewController.m in Sources */,
+				50FC81301844A63E00C19ABA /* SecondTabJViewController.m in Sources */,
 				50FC81291844A4EC00C19ABA /* UIPlaceHolderTextField.m in Sources */,
 				50FC81241844A4EC00C19ABA /* ACBaseViewController.m in Sources */,
 				50FC812D1844A62900C19ABA /* FirstTabJViewController.m in Sources */,
 				50FC81221844A4EC00C19ABA /* UIImage+ReSizeMethods.m in Sources */,
+				50676BBB1845F4B300741EA5 /* ThirdTabJViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +691,7 @@
 				50FC80F01844A47700C19ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50FC80F11844A47700C19ABA /* Build configuration list for PBXNativeTarget "Layout_TabBar_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -693,6 +700,7 @@
 				50FC80F31844A47700C19ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

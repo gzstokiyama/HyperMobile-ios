@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 
 #import "FirstTabJViewController.h"
-#import "SecondTabViewController.h"
+#import "SecondTabJViewController.h"
+#import "ThirdTabJViewController.h"
+
 
 @implementation AppDelegate
 
@@ -21,8 +23,8 @@
     // 初始化标签视图集控制器
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     //tabBarController.tabBar.barStyle = UIBarStyleBlack;
-    tabBarController.tabBar.barTintColor = [UIColor orangeColor];
-    tabBarController.tabBar.tintColor = [UIColor yellowColor];
+    tabBarController.tabBar.barTintColor = RGBCOLOR(250, 150, 30);
+    tabBarController.tabBar.tintColor = RGBCOLOR(250, 250, 0);
     
     
     // 初始化第一个标签视图控制器 (在导航控制器中)
@@ -32,12 +34,18 @@
     firstTabJVC.title = @"First";
     
     // 初始化第二个标签视图控制器 (UIViewController)
-    SecondTabViewController *secondTabJVC = [[SecondTabViewController alloc] init];
-    secondTabJVC.tabBarItem.image = [UIImage imageNamed:@"settings1"];
+    SecondTabJViewController *secondTabJVC = [[SecondTabJViewController alloc] init];
+    secondTabJVC.tabBarItem.image = [UIImage imageNamed:@"cloud-download"];
     secondTabJVC.title = @"Second";
     
+    // 初始化第三个标签视图控制器 (UIViewController)
+    ThirdTabJViewController *thirdTabJVC = [[ThirdTabJViewController alloc] init];
+    UINavigationController *thirdTabJVCInNavC = [[UINavigationController alloc] initWithRootViewController:thirdTabJVC];
+    thirdTabJVC.tabBarItem.image = [UIImage imageNamed:@"settings1"];
+    thirdTabJVC.title = @"设置";
+    
     // 将子视图控制器装入 UITabBarController
-    tabBarController.viewControllers = @[firstTabJVCInNavC, secondTabJVC];
+    tabBarController.viewControllers = @[firstTabJVCInNavC, secondTabJVC, thirdTabJVCInNavC];
     
     self.window.rootViewController = tabBarController;
     

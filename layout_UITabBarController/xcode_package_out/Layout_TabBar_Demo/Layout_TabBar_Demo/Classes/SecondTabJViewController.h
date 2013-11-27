@@ -8,6 +8,6 @@
 
 #import "ACBaseViewController.h"
 
-@interface SecondTabViewController : ACBaseViewController
+@interface SecondTabJViewController : ACBaseViewController
 
 @end
