@@ -1,19 +1,20 @@
 
 {
     "head": {
-        
+
         "type": "UIViewController",
 
         "script": [
             {
-                "path": "FirstTab.js"
+                "path": "SecondTab.js"
             }
         ] 
+
     },
 
     "content": {
 
-        "title": "First",
+        "title": "Second",
 
         "bg_color": {
             "type": "UIColor",

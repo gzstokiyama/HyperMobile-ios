@@ -23,8 +23,8 @@
     // 初始化标签视图集控制器
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     //tabBarController.tabBar.barStyle = UIBarStyleBlack;
-    tabBarController.tabBar.barTintColor = RGBCOLOR(250, 150, 30);
-    tabBarController.tabBar.tintColor = RGBCOLOR(250, 250, 0);
+    tabBarController.tabBar.barTintColor = RGBCOLOR(240, 200, 80);
+    tabBarController.tabBar.tintColor = RGBCOLOR(60, 120, 30);
     
     
     // 初始化第一个标签视图控制器 (在导航控制器中)

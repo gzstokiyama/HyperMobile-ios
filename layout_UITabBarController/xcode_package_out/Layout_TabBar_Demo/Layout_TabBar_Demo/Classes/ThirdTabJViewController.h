@@ -8,6 +8,10 @@
 
 #import "ACBaseViewController.h"
 
-@interface ThirdTabJViewController : ACBaseViewController
+@interface ThirdTabJViewController : ACBaseViewController <UITableViewDelegate, UITableViewDataSource>
+
+
+@property (nonatomic, strong) UITableView *testTableView;
+@property (nonatomic, strong) NSDictionary *testTableViewDataSource;
 
 @end

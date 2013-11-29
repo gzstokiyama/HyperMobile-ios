@@ -1,0 +1,62 @@
+
+{
+    
+    "head": {
+
+        "type": "UIViewController",
+
+        "script": [
+            {
+                "path": "ThridTab.js"
+            }
+        ]
+
+    },
+
+
+    "content": {
+
+        "title": "Thrid",
+
+
+        "subviews": [
+
+            {
+                "class_name": "UITableView",
+                "var_name": "testTableView",
+
+                // 如果是表视图类，则有此Key设定表视图样式。(plain:普通样式, grouped:分组模式)
+                "style": "grouped",
+
+                // plain 样式时，做自定义 cell 样式
+                "cell": {
+                    "path": "somePath/CustomTableCell.json"
+                },
+
+                // 表视图数据源
+                "dataSource": {
+                    // 本地数据源 (或 http 请求到的 json对象)
+                    "type": "local",
+
+                    // json 文件路径
+                    "path": "json/ThridTabDataSource_testTableView.json"
+
+                }
+                    
+            }
+
+        ]
+
+    } 
+
+    
+
+
+}
+
+
+
+
+
+
+
