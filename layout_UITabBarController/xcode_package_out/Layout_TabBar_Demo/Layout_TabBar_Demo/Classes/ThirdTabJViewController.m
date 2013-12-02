@@ -45,9 +45,8 @@
     [self.view addSubview:self.testTableView];
     
     
-    
     self.testTableViewDataSource =
-    [[ACJSONKit sharedInstance] readDataFromMainBundleBy:@"ThridTabDataSource_testTableView.json"];
+    [[[ACJSONKit alloc] init] readDataFromMainBundleBy:@"ThridTabDataSource_testTableView.json"];
     
     //DLog(@"%@", self.testTableViewDataSource);
     //---------------------------------------------------------------------------------------------;

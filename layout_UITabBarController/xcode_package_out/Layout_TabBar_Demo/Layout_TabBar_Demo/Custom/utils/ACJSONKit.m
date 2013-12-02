@@ -10,20 +10,6 @@
 
 @implementation ACJSONKit
 
-#pragma mark - Singleton
-
-+ (ACJSONKit *)sharedInstance
-{
-    static dispatch_once_t pred;
-    static ACJSONKit *sharedInstance = nil;
-    
-    dispatch_once(&pred, ^{
-        sharedInstance = [[self alloc] init];
-    });
-    
-    return sharedInstance;
-}
-
 
 - (NSDictionary *)readDataFromMainBundleBy:(NSString *)theJSONFileName
 {

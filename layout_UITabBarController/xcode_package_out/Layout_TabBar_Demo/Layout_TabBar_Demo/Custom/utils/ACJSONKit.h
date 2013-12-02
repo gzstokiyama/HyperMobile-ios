@@ -10,8 +10,6 @@
 
 @interface ACJSONKit : NSObject
 
-+ (ACJSONKit *)sharedInstance;
-
 
 - (NSDictionary *)readDataFromMainBundleBy:(NSString *)theJSONFileName;
 
