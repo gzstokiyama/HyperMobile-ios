@@ -106,6 +106,14 @@
     return cell;
 }
 
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    UIView *bgView = [[UIView alloc] init];
+//    bgView.backgroundColor = [UIColor grayColor];
+//    
+//    return bgView;
+//}
+
 - (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section
 {
     NSArray *sectionsArray = [self.testTableViewDataSource objectForKey:@"sections"];
@@ -117,9 +125,14 @@
 
 #pragma mark - UITableView Delegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30.f;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 通过 字典中 的 key 来判断，是统一高度，还是各个 section 不同高度，还是 各个行不同高度，还是自适应高度
+    // 暂定 统一高度
     
     
     return 44.f;
@@ -129,6 +142,10 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    
+    // 行选择事件
     
 }
 

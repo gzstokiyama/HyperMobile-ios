@@ -30,7 +30,22 @@
 
                 // plain 样式时，做自定义 cell 样式
                 "cell": {
-                    "path": "somePath/CustomTableCell.json"
+
+                    "type": "original",
+
+                    // type 为 custom 则给出自定义 单元的 样式 json 文件
+                    //"path": "somePath/CustomTableCell.json",
+
+                    "height": "44"
+                    
+                },
+
+                "sectionHeader": {
+                    "type": "original",
+
+                    // type 为 custom 则给出自定义 单元头的 样式 json 文件
+                    //"path": "somePath/CustomTableSectionHeader.json",
+                    "height": "24"
                 },
 
                 // 表视图数据源
@@ -41,7 +56,10 @@
                     // json 文件路径
                     "path": "json/ThridTabDataSource_testTableView.json"
 
-                }
+                },
+
+                // 点击行事件
+                "action": "json/ThridTabDelegate_testTableView.js"
                     
             }
 
