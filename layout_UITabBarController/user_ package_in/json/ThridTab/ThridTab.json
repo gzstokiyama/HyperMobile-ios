@@ -7,7 +7,7 @@
 
         "script": [
             {
-                "path": "ThridTab.js"
+                "path": "json/ThridTab/ThridTab.js"
             }
         ]
 
@@ -54,12 +54,12 @@
                     "type": "local",
 
                     // json 文件路径
-                    "path": "json/ThridTabDataSource_testTableView.json"
+                    "path": "json/ThridTab/ThridTab_testTableViewDataSource.json"
 
                 },
 
                 // 点击行事件
-                "action": "json/ThridTabDelegate_testTableView.js"
+                "action": "json/ThridTab/ThridTab_testTableViewActions.js"
                     
             }
 

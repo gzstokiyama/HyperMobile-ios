@@ -6,7 +6,7 @@
 
         "script": [
             {
-                "path": "FirstTab.js"
+                "path": "json/FirstTab/FirstTab.js"
             }
         ] 
     },

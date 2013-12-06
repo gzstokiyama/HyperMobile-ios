@@ -31,7 +31,7 @@
     
     //-- 测试透明度 ----------------------------------------------------------------------------------
     UITextView *testTextView = [[UITextView alloc] initWithFrame:CGRectMake(0.f,
-                                                                            300.f,
+                                                                            350.f,
                                                                             320.f,
                                                                             200.f)];
     

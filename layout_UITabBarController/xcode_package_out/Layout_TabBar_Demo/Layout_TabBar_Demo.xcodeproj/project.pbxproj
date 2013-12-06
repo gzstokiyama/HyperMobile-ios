@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50676BBB1845F4B300741EA5 /* ThirdTabJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50676BBA1845F4B300741EA5 /* ThirdTabJViewController.m */; };
+		50CF43D818504F6300C7BE6F /* ThirdTabJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CF43D618504F6300C7BE6F /* ThirdTabJViewController.m */; };
+		50CF43D918504F6300C7BE6F /* ThridTabDataSource_testTableView.json in Resources */ = {isa = PBXBuildFile; fileRef = 50CF43D718504F6300C7BE6F /* ThridTabDataSource_testTableView.json */; };
+		50CF43DC185051E000C7BE6F /* Settings01JViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CF43DB185051E000C7BE6F /* Settings01JViewController.m */; };
+		50CF43DF1850520300C7BE6F /* Settings02JViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CF43DE1850520300C7BE6F /* Settings02JViewController.m */; };
+		50CF43E21850521000C7BE6F /* Settings03JViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CF43E11850521000C7BE6F /* Settings03JViewController.m */; };
 		50E0C17A184867430092FCC0 /* ACJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0C179184867430092FCC0 /* ACJSONKit.m */; };
 		50E0C17B184867430092FCC0 /* ACJSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E0C179184867430092FCC0 /* ACJSONKit.m */; };
-		50E0C17D18486EC10092FCC0 /* ThridTabDataSource_testTableView.json in Resources */ = {isa = PBXBuildFile; fileRef = 50E0C17C18486EC10092FCC0 /* ThridTabDataSource_testTableView.json */; };
-		50E0C17E18486EC10092FCC0 /* ThridTabDataSource_testTableView.json in Resources */ = {isa = PBXBuildFile; fileRef = 50E0C17C18486EC10092FCC0 /* ThridTabDataSource_testTableView.json */; };
 		50FC80C61844A47700C19ABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC80C51844A47700C19ABA /* Foundation.framework */; };
 		50FC80C81844A47700C19ABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC80C71844A47700C19ABA /* CoreGraphics.framework */; };
 		50FC80CA1844A47700C19ABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FC80C91844A47700C19ABA /* UIKit.framework */; };
@@ -58,11 +60,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		50676BB91845F4B300741EA5 /* ThirdTabJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTabJViewController.h; sourceTree = "<group>"; };
-		50676BBA1845F4B300741EA5 /* ThirdTabJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTabJViewController.m; sourceTree = "<group>"; };
+		50CF43D518504F6300C7BE6F /* ThirdTabJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdTabJViewController.h; sourceTree = "<group>"; };
+		50CF43D618504F6300C7BE6F /* ThirdTabJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdTabJViewController.m; sourceTree = "<group>"; };
+		50CF43D718504F6300C7BE6F /* ThridTabDataSource_testTableView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ThridTabDataSource_testTableView.json; sourceTree = "<group>"; };
+		50CF43DA185051E000C7BE6F /* Settings01JViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings01JViewController.h; sourceTree = "<group>"; };
+		50CF43DB185051E000C7BE6F /* Settings01JViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings01JViewController.m; sourceTree = "<group>"; };
+		50CF43DD1850520300C7BE6F /* Settings02JViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings02JViewController.h; sourceTree = "<group>"; };
+		50CF43DE1850520300C7BE6F /* Settings02JViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings02JViewController.m; sourceTree = "<group>"; };
+		50CF43E01850521000C7BE6F /* Settings03JViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings03JViewController.h; sourceTree = "<group>"; };
+		50CF43E11850521000C7BE6F /* Settings03JViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings03JViewController.m; sourceTree = "<group>"; };
 		50E0C178184867430092FCC0 /* ACJSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACJSONKit.h; sourceTree = "<group>"; };
 		50E0C179184867430092FCC0 /* ACJSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACJSONKit.m; sourceTree = "<group>"; };
-		50E0C17C18486EC10092FCC0 /* ThridTabDataSource_testTableView.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ThridTabDataSource_testTableView.json; sourceTree = "<group>"; };
 		50FC80C21844A47700C19ABA /* Layout_TabBar_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layout_TabBar_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50FC80C51844A47700C19ABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50FC80C71844A47700C19ABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,6 +150,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50CF43D418504F6300C7BE6F /* ThridTab */ = {
+			isa = PBXGroup;
+			children = (
+				50CF43D518504F6300C7BE6F /* ThirdTabJViewController.h */,
+				50CF43D618504F6300C7BE6F /* ThirdTabJViewController.m */,
+				50CF43D718504F6300C7BE6F /* ThridTabDataSource_testTableView.json */,
+				50CF43DA185051E000C7BE6F /* Settings01JViewController.h */,
+				50CF43DB185051E000C7BE6F /* Settings01JViewController.m */,
+				50CF43DD1850520300C7BE6F /* Settings02JViewController.h */,
+				50CF43DE1850520300C7BE6F /* Settings02JViewController.m */,
+				50CF43E01850521000C7BE6F /* Settings03JViewController.h */,
+				50CF43E11850521000C7BE6F /* Settings03JViewController.m */,
+			);
+			path = ThridTab;
+			sourceTree = "<group>";
+		};
 		50E0C177184867070092FCC0 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,9 +293,7 @@
 				50FC812C1844A62900C19ABA /* FirstTabJViewController.m */,
 				50FC812E1844A63E00C19ABA /* SecondTabJViewController.h */,
 				50FC812F1844A63E00C19ABA /* SecondTabJViewController.m */,
-				50676BB91845F4B300741EA5 /* ThirdTabJViewController.h */,
-				50676BBA1845F4B300741EA5 /* ThirdTabJViewController.m */,
-				50E0C17C18486EC10092FCC0 /* ThridTabDataSource_testTableView.json */,
+				50CF43D418504F6300C7BE6F /* ThridTab */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -469,7 +491,7 @@
 				50FC81391844B74F00C19ABA /* bubble@2x.png in Resources */,
 				50FC80D01844A47700C19ABA /* InfoPlist.strings in Resources */,
 				50FC81271844A4EC00C19ABA /* nav_back@2x.png in Resources */,
-				50E0C17D18486EC10092FCC0 /* ThridTabDataSource_testTableView.json in Resources */,
+				50CF43D918504F6300C7BE6F /* ThridTabDataSource_testTableView.json in Resources */,
 				50FC81381844B74F00C19ABA /* bubble.png in Resources */,
 				50FC813A1844B74F00C19ABA /* cloud-download.png in Resources */,
 				50FC81261844A4EC00C19ABA /* nav_back.png in Resources */,
@@ -483,7 +505,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50E0C17E18486EC10092FCC0 /* ThridTabDataSource_testTableView.json in Resources */,
 				50FC80E91844A47700C19ABA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,20 +519,23 @@
 				50FC811E1844A4EC00C19ABA /* RIButtonItem.m in Sources */,
 				50FC81251844A4EC00C19ABA /* MBProgressHUDManager.m in Sources */,
 				50FC80D61844A47700C19ABA /* AppDelegate.m in Sources */,
+				50CF43E21850521000C7BE6F /* Settings03JViewController.m in Sources */,
 				50FC81211844A4EC00C19ABA /* UIImage+ConvertRGBToGreyScale.m in Sources */,
+				50CF43DF1850520300C7BE6F /* Settings02JViewController.m in Sources */,
 				50FC81281844A4EC00C19ABA /* MBProgressHUD.m in Sources */,
 				50FC81201844A4EC00C19ABA /* UIAlertView+Blocks.m in Sources */,
 				50FC812A1844A4EC00C19ABA /* UIPlaceHolderTextView.m in Sources */,
+				50CF43DC185051E000C7BE6F /* Settings01JViewController.m in Sources */,
 				50FC80D21844A47700C19ABA /* main.m in Sources */,
 				50FC811F1844A4EC00C19ABA /* UIActionSheet+Blocks.m in Sources */,
 				50FC81231844A4EC00C19ABA /* UINavigationBar+TitleTextColor.m in Sources */,
 				50E0C17A184867430092FCC0 /* ACJSONKit.m in Sources */,
 				50FC81301844A63E00C19ABA /* SecondTabJViewController.m in Sources */,
+				50CF43D818504F6300C7BE6F /* ThirdTabJViewController.m in Sources */,
 				50FC81291844A4EC00C19ABA /* UIPlaceHolderTextField.m in Sources */,
 				50FC81241844A4EC00C19ABA /* ACBaseViewController.m in Sources */,
 				50FC812D1844A62900C19ABA /* FirstTabJViewController.m in Sources */,
 				50FC81221844A4EC00C19ABA /* UIImage+ReSizeMethods.m in Sources */,
-				50676BBB1845F4B300741EA5 /* ThirdTabJViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

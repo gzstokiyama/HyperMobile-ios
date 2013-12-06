@@ -8,6 +8,11 @@
 
 #import "ThirdTabJViewController.h"
 
+#import "Settings01JViewController.h"
+#import "Settings02JViewController.h"
+#import "Settings03JViewController.h"
+
+
 @interface ThirdTabJViewController ()
 
 @end
@@ -145,7 +150,49 @@
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
     
-    // 行选择事件
+    
+    // 多分支事件
+    switch (section)
+    {
+        // 第 0 个 section
+        case (0):
+        {
+            switch (row)
+            {
+                case (0):
+                {
+                    Settings01JViewController *svc01 = [[Settings01JViewController alloc] init];
+                    [self.navigationController pushViewController:svc01 animated:YES];
+                }
+                    break;
+            }
+        }
+            break;
+            
+            
+        // 第 1 个 section
+        case (1):
+        {
+            switch (row)
+            {
+                case (0):
+                {
+                    Settings02JViewController *svc02 = [[Settings02JViewController alloc] init];
+                    [self.navigationController pushViewController:svc02 animated:YES];
+                }
+                    break;
+                    
+                case (1):
+                {
+                    Settings03JViewController *svc03 = [[Settings03JViewController alloc] init];
+                    [self.navigationController pushViewController:svc03 animated:YES];
+                }
+                    break;
+            }
+        }
+            break;
+            
+    }
     
 }
 
